@@ -11,6 +11,7 @@ public static class CharizardPlayModeCheck
     private static int stage;
     private static double deadline, captureAt;
     private static bool failed;
+    private static bool clashChecked;
     private static System.DateTime requested;
     private static string path;
     private static bool Visual => System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"-charizardVisualCheck")>=0;
@@ -24,7 +25,7 @@ public static class CharizardPlayModeCheck
     }
     private static void Attach()
     {
-        ArenaPreview.TrainingMode=false; stage=0; deadline=EditorApplication.timeSinceStartup+100;
+        ArenaPreview.TrainingMode=false; stage=0; clashChecked=false; deadline=EditorApplication.timeSinceStartup+100;
         EditorApplication.update-=Tick; EditorApplication.update+=Tick;
         Application.logMessageReceived-=OnLog; Application.logMessageReceived+=OnLog;
     }
@@ -63,6 +64,12 @@ public static class CharizardPlayModeCheck
         else if(stage==2 && !combat.IsCasting)
         {
             if(boss.Health!=480) { Finish(false,"runtime E boss damage"); return; }
+            if(!clashChecked)
+            {
+                combat.Projectiles.Add(new ElectricProjectile(new Vector2(.8f,0),new Vector2(3.2f,0),0,5,10,true));
+                boss.Shots.Add(new BossProjectile(new Vector2(3.2f,0),Vector2.left,10,2.4f,.3f,5,false));
+                stage=15; return;
+            }
             if(!boss.StartAttack(CharizardSkill.FireSpin)) { Finish(false,"runtime Fire Spin start"); return; }
             if(Visual)
             {
@@ -71,6 +78,12 @@ public static class CharizardPlayModeCheck
                 captureAt=EditorApplication.timeSinceStartup+.5; stage=3;
             }
             else stage=5;
+        }
+        else if(stage==15 && combat.Projectiles.Count==0 && boss.Shots.Count==0)
+        {
+            if(combat.Health!=200 || boss.Health!=480 || !combat.Impacts.Exists(x=>x.clash))
+            { Finish(false,"runtime equal spell clash failed or damaged a character"); return; }
+            clashChecked=true; stage=2;
         }
         else if(stage==3 && EditorApplication.timeSinceStartup>=captureAt)
         {

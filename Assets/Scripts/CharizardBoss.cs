@@ -19,6 +19,13 @@ public sealed class CharizardBoss : TrainingDummy
     public readonly List<BossProjectile> Shots = new List<BossProjectile>();
     public PikachuCombat Opponent { get; private set; }
     public float Height { get; private set; }
+    public float SpinPower { get; private set; }
+    public bool SpinActive => ActiveSkill==3 && !WindingUp && SpinPower>0;
+    public void ReduceSpin(float power)
+    {
+        SpinPower=Mathf.Max(0,SpinPower-power);
+        if(SpinPower<=.0001f) { ActiveSkill=-1; Height=0; recovery=.65f; }
+    }
     private readonly float[] cooldowns = new float[4];
     private readonly Dictionary<string,PmdSpriteAnimation> clips = new Dictionary<string,PmdSpriteAnimation>();
     private SpriteRenderer body;
@@ -52,6 +59,7 @@ public sealed class CharizardBoss : TrainingDummy
         Vector2 offset = (Vector2)Opponent.Player.transform.position - CastOrigin;
         LockedDirection = offset.sqrMagnitude > .001f ? offset.normalized : Vector2.left;
         ActiveSkill = (int)skill; WindingUp = true; PhaseTime = 0; emitted = 0; clawHit = false;
+        SpinPower=skill==CharizardSkill.FireSpin?spinDamage*6:0;
         cooldowns[ActiveSkill] = new[] { flameCooldown, clawCooldown, airCooldown, spinCooldown }[ActiveSkill];
         return true;
     }
@@ -66,7 +74,8 @@ public sealed class CharizardBoss : TrainingDummy
             UpdatePose(); return;
         }
         for(int i=0;i<4;i++) cooldowns[i]=Mathf.Max(0,cooldowns[i]-dt);
-        TickShots(dt);
+        SpellClash.Step(Opponent,this,dt);
+        if(Opponent.BattleEnded) { Shots.Clear(); Opponent.Projectiles.Clear(); ActiveSkill=-1; UpdatePose(); return; }
         if (ActiveSkill < 0)
         {
             recovery -= dt;
@@ -117,24 +126,12 @@ public sealed class CharizardBoss : TrainingDummy
                 Vector2 offset=(Vector2)Opponent.Player.transform.position-CastOrigin;
                 float along=Vector2.Dot(offset,LockedDirection);
                 float across=Mathf.Abs(offset.x*LockedDirection.y-offset.y*LockedDirection.x);
-                if(along>=.4f && along<=7 && across<=.25f+along*.18f) Opponent.TakeDamage(spinDamage);
+                if(along>=.4f && along<=7 && across<=.25f+along*.18f) Opponent.TakeDamage(SpinPower/6);
                 emitted++;
             }
         }
         if(PhaseTime>=Durations[ActiveSkill]) { ActiveSkill=-1; Height=0; recovery=.65f; }
         UpdatePose();
-    }
-    private void TickShots(float dt)
-    {
-        for(int i=Shots.Count-1;i>=0;i--)
-        {
-            var shot=Shots[i]; Vector2 before=shot.position;
-            float step=Mathf.Min(shot.remaining,shot.speed*dt);
-            shot.position+=shot.direction*step; shot.remaining-=step;
-            if(DistanceToSegment(Opponent.Player.transform.position,before,shot.position)<=shot.radius+.22f)
-            { Opponent.TakeDamage(shot.damage); Shots.RemoveAt(i); }
-            else if(shot.remaining<=0) Shots.RemoveAt(i);
-        }
     }
     public static float DistanceToSegment(Vector2 point,Vector2 a,Vector2 b)
     { Vector2 d=b-a; return Vector2.Distance(point,a+d*(d.sqrMagnitude<.00001f?0:Mathf.Clamp01(Vector2.Dot(point-a,d)/d.sqrMagnitude))); }
@@ -155,7 +152,8 @@ public sealed class BossProjectile
 {
     public Vector2 position;
     public readonly Vector2 direction;
-    public readonly float speed, radius, damage;
+    public readonly float speed, radius;
+    public float damage;
     public float remaining;
     public readonly bool air;
     public BossProjectile(Vector2 p,Vector2 d,float speed,float range,float radius,float damage,bool air)

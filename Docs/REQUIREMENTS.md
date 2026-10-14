@@ -14,6 +14,9 @@
   auto-selects a nearby enemy within 1.8 units; Q immediately applies its self buff.
 - Releasing the ability key before clicking casts in the character's facing direction.
 - Casting locks movement, has a character animation, and prevents dashing.
+- Opposing ranged energy spells clash by remaining damage strength. Equal attacks
+  cancel; the stronger continues with the difference. Contact explosions have no
+  extra damage or crater. Fire Spin and Thunderbolt participate; Q and melee do not.
 - Each ability has independently adjustable cooldown and balance parameters.
 - Boss locks aim/target on starting its cast; projectile tracking is per ability.
 - Boss attacks must be dodgeable.

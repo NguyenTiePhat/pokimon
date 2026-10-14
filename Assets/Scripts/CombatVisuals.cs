@@ -172,6 +172,11 @@ public sealed class CombatVisuals : MonoBehaviour
             float life = Mathf.Clamp01(impact.age / .65f);
             int radius = Mathf.RoundToInt((8 + life*28)*impact.radius);
             Color32 color = impact.iron ? new Color32(220,244,255,(byte)((1-life)*255)) : new Color32(255,202,46,(byte)((1-life)*255));
+            if(impact.clash)
+            {
+                surface.Ellipse(64,64,radius+5,radius+5,new Color32(91,222,255,(byte)((1-life)*150)),false,2);
+                surface.Ellipse(64,64,radius,radius,new Color32(255,153,52,(byte)((1-life)*230)),false,3);
+            }
             surface.Ellipse(64,64,radius,Mathf.Max(3,radius/2),color,false,2);
             if (life < .35f) surface.Ellipse(64,70,Mathf.RoundToInt((1-life)*13),Mathf.RoundToInt((1-life)*17),new Color32(255,255,211,220));
             for (int ray = 0; ray < 7; ray++)

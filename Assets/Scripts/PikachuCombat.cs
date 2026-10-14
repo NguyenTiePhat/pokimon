@@ -245,7 +245,7 @@ public sealed class PikachuCombat : MonoBehaviour
         float regeneratingTime = Mathf.Max(0, delta - regenDelay);
         regenDelay = Mathf.Max(0, regenDelay - delta);
         if (!IsCasting) Mana = Mathf.Min(100, Mana + manaRegen * regeneratingTime);
-        TickProjectiles(delta);
+        if (!(Dummy is CharizardBoss)) TickProjectiles(delta);
         for (int i = Impacts.Count - 1; i >= 0; i--) { Impacts[i].age += delta; if (Impacts[i].age > .65f) Impacts.RemoveAt(i); }
         if (Player.IsEntering) return;
         if (StunRemaining > 0) { Player.CombatPose("Hurt",stunDuration-StunRemaining,Player.FacingVector); return; }
@@ -280,9 +280,13 @@ public sealed class PikachuCombat : MonoBehaviour
         else if (skill == PikachuSkill.Thunderbolt && lockedTarget && lockedTarget.IsAlive)
         {
             // A targeted discharge: position changes do not break a committed lock.
-            BeamEnd = (Vector2)lockedTarget.transform.position + Vector2.up * .5f;
+            Vector2 beamTarget = lockedTarget.transform.position;
+            float remainingDamage = data.damage;
+            if (lockedTarget is CharizardBoss boss)
+                remainingDamage = SpellClash.TraceThunderbolt(this,boss,Position,beamTarget,data.damage,out beamTarget);
+            BeamEnd = beamTarget + Vector2.up * .5f;
             BeamRemaining = .32f;
-            lockedTarget.TakeDamage(data.damage);
+            if (remainingDamage > 0) lockedTarget.TakeDamage(remainingDamage);
         }
         else if (skill == PikachuSkill.IronTail)
         {
@@ -320,24 +324,25 @@ public sealed class PikachuCombat : MonoBehaviour
             bool hit = Dummy && Dummy.IsAlive && SegmentDistance(Dummy.transform.position, before, after) <= .35f + ball.charge * .3f;
             if (!hit && ball.elapsed < ball.duration) continue;
             Vector2 impact = hit ? ClosestPoint(Dummy.transform.position, before, after) : ball.end;
-            if (ball.basic)
-            {
-                if (hit)
-                {
-                    Dummy.TakeDamage(ball.damage);
-                    Impacts.Add(new ElectricImpact(impact, .25f, false));
-                }
-                Projectiles.RemoveAt(i);
-                continue;
-            }
-            float radius = .7f + ball.charge * .8f;
-            if (Dummy && Vector2.Distance(Dummy.transform.position, impact) <= radius) Dummy.TakeDamage(ball.damage);
-            Impacts.Add(new ElectricImpact(impact, radius, false));
-            Craters.Add(impact);
-            visuals.AddCrater(impact, radius);
+            ResolveProjectileImpact(ball,impact,hit);
             Projectiles.RemoveAt(i);
         }
     }
+
+    public void ResolveProjectileImpact(ElectricProjectile ball,Vector2 impact,bool hit)
+    {
+        if(ball.basic)
+        {
+            if(hit) { Dummy.TakeDamage(ball.damage); Impacts.Add(new ElectricImpact(impact,.25f,false)); }
+            return;
+        }
+        float radius=.7f+ball.charge*.8f;
+        if(Dummy && Vector2.Distance(Dummy.transform.position,impact)<=radius) Dummy.TakeDamage(ball.damage);
+        Impacts.Add(new ElectricImpact(impact,radius,false)); Craters.Add(impact); visuals.AddCrater(impact,radius);
+    }
+
+    public void ClashExplosion(Vector2 point,float power)
+    { Impacts.Add(new ElectricImpact(point+Vector2.up*.5f,Mathf.Lerp(.45f,1.5f,Mathf.Clamp01(power/100)),false,true)); }
 
     private static Vector2 ClosestPoint(Vector2 point, Vector2 from, Vector2 to)
     {
@@ -380,7 +385,8 @@ public sealed class PikachuCombat : MonoBehaviour
 public sealed class ElectricProjectile
 {
     public readonly Vector2 start, end;
-    public readonly float charge, damage, duration;
+    public readonly float charge, duration;
+    public float damage;
     public readonly bool basic;
     public float elapsed;
     public Vector2 Position => Vector2.Lerp(start, end, Mathf.Clamp01(elapsed / duration));
@@ -393,6 +399,7 @@ public sealed class ElectricImpact
     public readonly Vector2 position;
     public readonly float radius;
     public readonly bool iron;
+    public readonly bool clash;
     public float age;
-    public ElectricImpact(Vector2 position, float radius, bool iron) { this.position = position; this.radius = radius; this.iron = iron; }
+    public ElectricImpact(Vector2 position, float radius, bool iron, bool clash=false) { this.position = position; this.radius = radius; this.iron = iron; this.clash=clash; }
 }

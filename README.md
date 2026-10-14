@@ -14,6 +14,9 @@ No stage-selection map, music, or saved progression yet.
 Pikachu flashes and emits impact sparks when hit. Taking 25 damage within 2s
 causes a 0.8s stun with orbiting stars, followed by 2s stun protection. A stun
 interrupts a casting ability, sets its cooldown to 2s, and refunds no resources.
+Opposing energy attacks now clash: equal strength cancels both; the stronger
+attack continues with reduced damage. Contact explosions are visual only.
+See `Docs/SPELL_CLASHES.md` for Fire Spin and Thunderbolt interactions.
 
 Stage 1: `Assets/Scenes/CharizardArena.unity` contains a grey brick arena matching
 the supplied sketch, gold court markings and ten animated decorative fires.

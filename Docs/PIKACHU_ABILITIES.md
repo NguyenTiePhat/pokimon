@@ -12,7 +12,7 @@ not fire; E aiming and X charging retain priority for their own left-click casts
 
 | Key | Ability | Mana | Cooldown | Effect | Lightning |
 | --- | --- | --- | --- | --- | --- |
-| E | Thunderbolt | 30 | 15s | 0.35s charge; targeted, unavoidable 20 damage unless immune | +3 |
+| E | Thunderbolt | 30 | 15s | 0.35s charge; targeted 20 damage, subject to immunity and opposing spell clashes | +3 |
 | Q | Quick Attack | 30 | 20s | 0.08s cast; 5s run/dash speed x1.5, cast speed x1.3, thin cyan aura | +2 |
 | C | Iron Tail | 20 | 10s | 0.35s leap/swing within 1.8 units; 25 damage and 40% slow for 2s | +5 |
 | X | Electro Ball | 70 | 60s | Up to 1.5s charge; 20–100 damage, fixed flight destination, dodgeable, permanent crater | consumes 15 |
@@ -37,7 +37,8 @@ Thunderbolt: hold E to aim while moving; left click the dummy to
 commit. Releasing without clicking selects a target in the facing cone. Invalid
 target, range, mana or cooldown checks do not consume resources. Thunderbolt
 locks a live target on starting its cast and follows that target even if it moves
-away. Immunity is checked at damage time. Press C to auto-select a live nearby
+away. Immunity is checked at damage time. Opposing spells can now weaken or block
+the discharge; see `SPELL_CLASHES.md`. Press C to auto-select a live nearby
 target regardless of pointer or facing direction, without a manual aiming step.
 Iron Tail locks the attack location,
 so a target that moves out of the landing area can avoid the hit/slow.

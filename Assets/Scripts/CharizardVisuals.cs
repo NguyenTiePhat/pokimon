@@ -11,6 +11,7 @@ public sealed class CharizardVisuals : MonoBehaviour
         boss=owner;
         fire=new CombatPixelSurface("Charizard flames, claws and air blades",transform,768,768,32,14);
         warning=new CombatPixelSurface("Charizard dodge warning",transform,768,768,32,4);
+        fire.Clear(); fire.Apply(); warning.Clear(); warning.Apply();
     }
     private void LateUpdate() { Render(Time.time); }
     public void Render(float time)

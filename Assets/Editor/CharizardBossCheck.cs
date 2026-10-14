@@ -55,7 +55,7 @@ public static class CharizardBossCheck
             Require(combat.TryCast(PikachuSkill.IronTail,Vector2.right*100),"C auto targets boss");
             combat.Tick(.36f); Require(boss.Health==455 && boss.SlowRemaining>0,"boss takes tail damage and slow");
             combat.Tick(2); Require(combat.TryBasicAttack((Vector2)boss.transform.position+Vector2.up*.45f),"basic shot targets boss");
-            combat.Tick(1); Require(boss.Health==450,"boss takes basic projectile damage");
+            boss.TickBoss(1); Require(boss.Health==450,"boss takes basic projectile damage");
             boss.TakeDamage(9999); Require(combat.BattleEnded && !combat.TryBasicAttack(Vector2.zero),"victory must stop combat");
             boss.TickBoss(.1f); Require(boss.Shots.Count==0,"victory clears enemy shots");
             Fresh(); combat.TakeDamage(200);
