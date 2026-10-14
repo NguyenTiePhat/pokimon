@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 277a81ce6b33e384eb02593c531c7e64
+  - enabled: 1
+    path: Assets/Scenes/CharizardArena.unity
+    guid: f2afb96d47cf1c84b9d5ba9866b1bbe3
+  m_configObjects: {}

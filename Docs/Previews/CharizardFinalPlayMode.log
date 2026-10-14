@@ -1,0 +1,452 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.5/staging' branch; Version is '6000.5.7f1 (017862109af0) revision 96354'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-admin" at "2026-10-14T04:02:03.3420032Z"
+OS: 'Windows 11  (10.0.26300) CoreSingleLanguage' Language: 'en' Physical Memory: 11995 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-14T04:02:03Z
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\6000.5.7f1\Editor\Unity.exe
+-batchmode
+-projectPath
+D:/UnityProjects/PokemonBossArena
+-executeMethod
+CharizardPlayModeCheck.Run
+-logFile
+D:/UnityProjects/PokemonBossArena/Docs/Previews/CharizardFinalPlayMode.log
+Successfully changed project path to: D:/UnityProjects/PokemonBossArena
+D:/UnityProjects/PokemonBossArena
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.Player connection [26712]  Target information:
+
+Player connection [26712]  * "[IP] 172.16.72.168 [Port] 55504 [Flags] 2 [Guid] 20162798 [EditorId] 20162798 [Version] 1048832 [Id] WindowsEditor(7,PCcuaPhat) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [26712] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [26712] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-19708" after 0.3 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-admin"
+[Licensing::IpcConnector] LicenseClient-admin channel disconnected successfully.
+[Licensing::IpcConnector] Channel LicenseClient-admin-6000.5.7 doesn't exist
+[Licensing::Module] Successfully launched the LicensingClient (PId: 16312)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-admin-6000.5.7" at "2026-10-14T04:02:06.5259164Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 16312, path: "D:/Unity/6000.5.7f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              7a0e92fdf52d4c0f8c108b1bb984d719
+  Correlation Id:          0d41f498b98335b42d13cae822b08d8c
+  External correlation Id: 2499666843877712413
+  Machine Id:              Lhf/sAuseKZLr3d/xUxfAzPNncs=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-admin-6000.5.7" (connect: 0.38s, validation: 0.33s, handshake: 0.05s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-admin-6000.5.7-notifications" at "2026-10-14T04:02:06.9095056Z"
+[Licensing::Module] Connected to LicensingClient (PId: 16312, launch time: 0.01, total connection time: 0.76s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 18968478618703-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 3.66s
+[Licensing::Module] Licensing is initialized (took 2.99s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.5.7f1 (017862109af0)
+[Subsystems] Discovering subsystems at path D:/Unity/6000.5.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/UnityProjects/PokemonBossArena/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 3050 6GB Laptop GPU (ID=0x25ec)
+    Vendor:          NVIDIA
+    VRAM:            6002 MB
+    App VRAM Budget: 5234 MB
+    Driver:          32.0.15.8186
+Initialize mono
+Mono path[0] = 'D:/Unity/6000.5.7f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/6000.5.7f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'D:/Unity/6000.5.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/6000.5.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56708
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/6000.5.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002440 seconds.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.503 seconds
+Domain Reload Profiling: 1177ms
+	BeginReloadAssembly (192ms)
+		CreateAndSetChildDomain (5ms)
+	RebuildCommonClasses (9ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (82ms)
+	LoadAllAssembliesAndSetupDomain (364ms)
+		LoadAssemblies (186ms)
+		AnalyzeDomain (261ms)
+			TypeCache.Refresh (259ms)
+				TypeCache.ScanAssembly (244ms)
+	FinalizeReload (508ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (110ms)
+			ProcessInitializeOnLoadAttributes (119ms)
+			ProcessInitializeOnLoadMethodAttributes (191ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 4 packages:
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: D:\UnityProjects\PokemonBossArena\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: D:\UnityProjects\PokemonBossArena\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.screencapture@1.0.0 (location: D:\UnityProjects\PokemonBossArena\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\UnityProjects\PokemonBossArena\Library\PackageCache\com.unity.modules.imageconversion)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: D:\Unity\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/UnityProjects/PokemonBossArena
+DisplayProgressbar: Compiling Scripts
+Assets\Editor\CharizardPlayModeCheck.cs(37,18): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Editor\CharizardPlayModeCheck.cs(40,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Editor\PikachuPlayModeCheck.cs(61,63): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Editor\PikachuPlayModeCheck.cs(61,23): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+ExitCode: 0 Duration: 4s537ms
+[161/167    2s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[162/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[163/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[164/167    1s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+Assets\Editor\CharizardPlayModeCheck.cs(37,18): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Editor\CharizardPlayModeCheck.cs(40,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Editor\PikachuPlayModeCheck.cs(61,63): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Editor\PikachuPlayModeCheck.cs(61,23): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+[165/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[166/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (4.41 seconds), 6 items updated, 167 evaluated
+AssetDatabase: script compilation time: 5.524555s
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.616 seconds
+Domain Reload Profiling: 1281ms
+	BeginReloadAssembly (450ms)
+		DisableScriptedObjects (45ms)
+		CreateAndSetChildDomain (169ms)
+	RebuildCommonClasses (12ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (49ms)
+	LoadAllAssembliesAndSetupDomain (129ms)
+		LoadAssemblies (166ms)
+		AnalyzeDomain (14ms)
+			TypeCache.Refresh (7ms)
+			BuildScriptInfoCaches (4ms)
+	FinalizeReload (621ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (128ms)
+			ProcessInitializeOnLoadAttributes (123ms)
+			ProcessInitializeOnLoadMethodAttributes (106ms)
+			AfterProcessingInitializeOnLoad (4ms)
+		AwakeInstancesAfterBackupRestoration (35ms)
+Starting new worker id: 0 with log in D:/UnityProjects/PokemonBossArena/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=a18d44861080ef2499dce1c5ffb16337): Total: 7.120 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=761 ms
+		Asset DB Callback time: managed=87 ms, native=34 ms
+		Scripting: domain reloads=1, domain reload time=703 ms, compile time=5530 ms, other=2 ms
+		Project Asset Count: scripts=38, non-scripts=44
+		Asset File Changes: new=0, changed=2, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 25.650ms
+	ApplyChangesToAssetFolders: 0.255ms
+	Scan: 51.413ms
+	Collect global state as custom dependencies: 14.497ms
+	OnSourceAssetsModified: 1.057ms
+	CategorizeScriptCompilationAssets: 0.103ms
+	ProcessAssetsWithTransientArtifactChanges: 1.066ms
+	CategorizeAssets: 0.458ms
+	CompileScripts: 5530.056ms
+	ImportOutOfDateAssets: 648.966ms (622.949ms without children)
+		UnloadImportedAssets: 0.336ms
+		ImportSchedulerStart: 25.651ms
+	PostProcessAllAssets: 89.891ms
+		VCAutoAddAssetPostprocess 2.422ms
+		PostProcessCallbackCreateDeferredMaterials 0.060ms
+		MonoPostProcessAllAssets: 86.571ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 17.100ms
+			AssetPostprocessor.OnPostprocessAllAssets 15.175ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 11.558ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 8.316ms
+			AssetChangedListener.OnPostprocessAllAssets 3.929ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 2.923ms
+			SyncVS.PostprocessSyncProject 2.777ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.714ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.543ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 1.178ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.976ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.838ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.488ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.432ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.385ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.369ms
+			AssetEvents.OnPostprocessAllAssets 0.329ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.238ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.161ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.148ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.133ms
+	PostAssetChangesProfiler: 8.531ms
+	UnloadStreamsBegin: 1.783ms
+	Untracked: 739.803ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Scanning for USB devices : 5.436ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Pokemon Boss Arena
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 35 unused Assets / (0.5 MB). Loaded Objects now: 682.
+Memory consumption went from 189.9 MB to 189.3 MB.
+Total: 6.023800 ms (FindLiveObjects: 0.049900 ms CreateObjectMapping: 0.012900 ms MarkObjects: 5.718800 ms  DeleteObjects: 0.236200 ms)
+
+Opening scene 'Assets/Scenes/CharizardArena.unity'
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/CharizardArena.unity'
+	Deserialize:            5.856 ms
+	Integration:            23.440 ms
+	Integration of assets:  0.324 ms
+	Thread Wait Time:       0.067 ms
+	Total Operation Time:   29.687 ms
+Unloading 1 unused Assets / (1.0 KB). Loaded Objects now: 743.
+Memory consumption went from 191.3 MB to 191.3 MB.
+Total: 8.483500 ms (FindLiveObjects: 0.072700 ms CreateObjectMapping: 0.017100 ms MarkObjects: 8.351900 ms  DeleteObjects: 0.039700 ms)
+
+[Project] Loading completed in 13.561 seconds
+	Project init time: 				13.017 seconds
+		Template init time: 		0.000 seconds
+		Package Manager init time: 		3.323 seconds
+		Asset Database init time: 		0.636 seconds
+		Global illumination init time: 	0.003 seconds
+		Assemblies load time: 			1.218 seconds
+		Unity extensions init time: 	0.001 seconds
+		Asset Database refresh time: 	7.120 seconds
+	Scene opening time: 			0.189 seconds
+##utp:{"type":"ProjectInfo","version":2,"phase":"Immediate","time":1791950536889,"processId":19708,"projectLoad":13.5608082,"projectInit":13.0171529,"templateInit":0.0,"packageManagerInit":3.3228612,"assetDatabaseInit":0.6364082,"globalIlluminationInit":0.0030897,"assembliesLoad":1.2184364,"unityExtensionsInit":0.0005811,"assetDatabaseRefresh":7.1201935,"sceneOpening":0.1885513}
+##utp:{"type":"EditorInfo","version":2,"phase":"Immediate","time":1791950536889,"processId":19708,"editorVersion":"6000.5.7f1 (017862109af0)","branch":"6000.5/staging","buildType":"Release","platform":"Windows"}
+Reloading assemblies for play mode.
+Reloading assemblies after forced synchronous recompile.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.634 seconds
+Domain Reload Profiling: 1305ms
+	BeginReloadAssembly (419ms)
+		DisableScriptedObjects (38ms)
+		CreateAndSetChildDomain (68ms)
+	RebuildCommonClasses (17ms)
+	RebuildNativeTypeToScriptingClass (25ms)
+	initialDomainReloadingComplete (79ms)
+	LoadAllAssembliesAndSetupDomain (127ms)
+		LoadAssemblies (282ms)
+		AnalyzeDomain (11ms)
+			TypeCache.Refresh (8ms)
+	FinalizeReload (637ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (105ms)
+			ProcessInitializeOnLoadAttributes (104ms)
+			ProcessInitializeOnLoadMethodAttributes (89ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (41ms)
+
+Asset Pipeline Refresh (id=4a28e8c9995f9324baed580e2c1504bb): Total: 1.489 seconds - Initiated by StopAssetImportingV2(ForceSynchronousImport | ForceDomainReload)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=690 ms
+		Asset DB Callback time: managed=76 ms, native=4 ms
+		Scripting: domain reloads=1, domain reload time=713 ms, compile time=4 ms, other=0 ms
+		Project Asset Count: scripts=38, non-scripts=44
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 2.533ms
+	ApplyChangesToAssetFolders: 0.074ms
+	Collect global state as custom dependencies: 2.016ms
+	ProcessAssetsWithTransientArtifactChanges: 2.628ms
+	CategorizeAssets: 0.471ms
+	CompileScripts: 4.111ms
+	ImportOutOfDateAssets: 638.725ms (638.101ms without children)
+		UnloadImportedAssets: 0.322ms
+		ImportSchedulerStart: 0.283ms
+	PostProcessAllAssets: 77.660ms
+		PostProcessCallbackCreateDeferredMaterials 0.100ms
+		ShaderAssetModifiedCallback 0.052ms
+		MonoPostProcessAllAssets: 76.849ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 15.585ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 14.580ms
+			AssetPostprocessor.OnPostprocessAllAssets 11.154ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 8.348ms
+			AssetChangedListener.OnPostprocessAllAssets 3.209ms
+			SyncVS.PostprocessSyncProject 2.611ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.838ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.400ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.695ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.611ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.459ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.330ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.317ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.277ms
+			AssetEvents.OnPostprocessAllAssets 0.275ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.252ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.231ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.212ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.209ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.127ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.087ms
+	PostAssetChangesProfiler: 2.743ms
+	UnloadStreamsBegin: 0.077ms
+	Untracked: 751.638ms
+
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            1.236 ms
+	Integration:            279.493 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       32.626 ms
+	Total Operation Time:   313.358 ms
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+Start Indexing on Editor startup
+[Indexing] Starting Initial Indexing for Assets
+Created GICache directory at C:/Users/admin/AppData/LocalLow/Unity/Caches/GiCache. Took: 0.021s, timestamps: [15.432 - 15.453]
+[Licensing::Client] Successfully resolved entitlement details
+Worker ready: AssetImportWorkerHW0 0
+Unloading 23 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.472600 ms
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.861 ms
+	Integration:            207.737 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       0.010 ms
+	Total Operation Time:   208.611 ms
+Unloading 765 unused Assets / (7.0 MB). Loaded Objects now: 1386.
+Memory consumption went from 238.2 MB to 231.2 MB.
+Total: 6.351500 ms (FindLiveObjects: 0.114600 ms CreateObjectMapping: 0.123700 ms MarkObjects: 4.800600 ms  DeleteObjects: 1.311300 ms)
+
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.505700 ms
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            2.115 ms
+	Integration:            64.947 ms
+	Integration of assets:  0.008 ms
+	Thread Wait Time:       0.029 ms
+	Total Operation Time:   67.099 ms
+Unloading 572 unused Assets / (11.1 MB). Loaded Objects now: 990.
+Memory consumption went from 222.0 MB to 210.9 MB.
+Total: 7.297000 ms (FindLiveObjects: 0.081900 ms CreateObjectMapping: 0.067700 ms MarkObjects: 6.303900 ms  DeleteObjects: 0.841000 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.540000 ms
+Loaded scene 'Temp/__Backupscenes/0.backup'
+	Deserialize:            0.764 ms
+	Integration:            206.462 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       0.040 ms
+	Total Operation Time:   207.270 ms
+Unloading 193 unused Assets / (148.3 KB). Loaded Objects now: 1386.
+Memory consumption went from 229.6 MB to 229.4 MB.
+Total: 5.386600 ms (FindLiveObjects: 0.089600 ms CreateObjectMapping: 0.069400 ms MarkObjects: 4.901100 ms  DeleteObjects: 0.324700 ms)
+
+CHARIZARD_PLAYMODE_OK: default boss spawn, intro, player E damage, Fire Spin damage, victory, fresh retry, defeat, training round-trip; no runtime errors
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+CharizardPlayModeCheck:Finish (bool,string) (at Assets/Editor/CharizardPlayModeCheck.cs:108)
+CharizardPlayModeCheck:Tick () (at Assets/Editor/CharizardPlayModeCheck.cs:50)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()
+
+(Filename: Assets/Editor/CharizardPlayModeCheck.cs Line: 108)
+
+MonoPathRemapper: Attempts to remap: 5680; Successful remaps: 8
+Serialized file version minimum: 23, current 23
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-admin-6000.5.7-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-admin-6000.5.7 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Checking for leaked weakptr:
+  Found no leaked weakptrs.
+[Package Manager] Server process was shutdown
+##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1791950549558,"processId":19708,"allocatedMemory":12241737,"memoryLabels":[{"Default":167673},{"Permanent":15516},{"NewDelete":66859},{"Thread":4205176},{"Manager":32517},{"VertexData":8},{"Geometry":816},{"Texture":24},{"Shader":832045},{"Material":24},{"GfxDevice":57368},{"Animation":952},{"Audio":1168},{"FreeType":8},{"FontEngine":736},{"Physics":2146},{"Physics2D":16},{"Serialization":1080},{"Input":42840},{"JobScheduler":256},{"TextLib":280},{"Mono":48},{"ScriptingNativeRuntime":674964},{"BaseObject":2543400},{"Resource":1208},{"Renderer":3080},{"Transform":4685},{"File":4009},{"WebCam":616},{"Culling":32},{"Terrain":11442},{"Wind":24},{"STL":40},{"String":25836},{"StaticString":3808},{"Utility":2673238},{"Curl":2559},{"PoolAlloc":2168},{"AI":80},{"TypeTree":14869},{"CodeReload":448},{"RuntimeInitializeOnLoadManager":64},{"Sprites":102},{"SpriteAtlas":120},{"GI":7816},{"Director":8296},{"CloudService":9656},{"WebRequest":552},{"VR":47114},{"SceneManager":608},{"Video":208},{"LazyScriptCache":32},{"Camera":17},{"Secure":2377},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57888},{"StaticSafetyDebugInfo":278528},{"Analytics":552},{"Hierarchy":1176},{"UIElements":72},{"CoreStats":13688},{"Identifiers":6768},{"Gui":128},{"EditorUtility":85197},{"VersionControl":8},{"Undo":931},{"AssetDatabase":257675},{"AssetImporter":40},{"EditorGi":328},{"UnityConnect":38929},{"Upm":1912},{"UpmDiagnostics":8},{"AssetCompliance":64},{"DrivenProperties":72},{"LocalIPC":211},{"ProfilerEditor":9746},{"CoreBusinessMetrics":3480},{"Windowing":456},{"Licensing":664},{"AssetReference":32},{"IPCStream":32}]}
