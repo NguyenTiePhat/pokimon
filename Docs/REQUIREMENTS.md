@@ -4,7 +4,7 @@
 - Pixel-art 2D elevated top-down view, as in the supplied Pokémon Arena screenshot.
 - Real-time boss fights only; no small enemies.
 - Connected stage map inspired by Plants vs. Zombies 2.
-- Two bosses: Charizard first, then Blastoise unlocked by winning the first fight.
+- Two bosses: Charizard and Blastoise, both freely selectable from the main menu.
 - Each boss has a themed arena, HP, mana, and its own attacks.
 - Player: WASD, 200 HP, 100 regenerating mana.
 - Space dashes in movement direction, costs mana, grants no damage immunity.
@@ -42,7 +42,13 @@
 - Pikachu hit/stagger: red-white flash and impact sparks; 25 damage within 2s
   stuns for 0.8s with orbiting stars, then 2s stun protection. Still takes damage.
   Interrupted cast cooldown becomes 2s, without refunding mana or ultimate charge.
-- Unresolved: Blastoise abilities, boss stagger thresholds/durations, final assets and effects.
+- Blastoise stage 2: flooded circular stone temple, shallow channels, surrounding
+  lake and broken edge columns; open center, no global ice/slipping. Four marked
+  fountain tiles warn before erupting. Walking/dashing stays inside the court.
+- Blastoise 650 HP: Hydro Pump 20 damage / 4s; Water Pulse up to 24 / 6s;
+  Rapid Spin 25 / 8s; Hydro Cannon 60 / 18s with 2s warning and safe sides.
+  Both stages are available from the menu immediately, without a victory requirement.
+- Unresolved: boss mana, boss stagger thresholds/durations, final assets and effects.
 - Current camera: partial-arena view, continuous player following with map-edge bounds.
   Middle-mouse pan temporarily overrides following while held; release resumes it.
   Intro centers and locks the camera until the arrival ends. Abilities do not zoom.

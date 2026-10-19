@@ -1,4 +1,4 @@
-# Pokémon Boss Arena — Pikachu vs Charizard
+# Pokémon Boss Arena — Pikachu vs Charizard and Blastoise
 
 Unity 6000.5.7f1. Open this folder through Unity Hub, open
 `Assets/Scenes/MainMenu.unity`, and press Play.
@@ -10,7 +10,11 @@ Mode in the Editor. Stage 1 now starts a 500-HP Charizard boss fight with four
 telegraphed attacks, player damage, victory/defeat and retry. See
 `Docs/CHARIZARD_BOSS.md` for the approved balance and controls. The “Luyện tập”
 panel switches to the training dummy or back to Charizard with a fresh scene.
-No stage-selection map, music, or saved progression yet.
+Choose either Charizard or stage 2, **Blastoise — Đền nước ngập**, freely from
+the main menu, including on a fresh save. The Charizard victory screen also offers
+stage 2. The circular water temple has four new boss attacks and marked fountains.
+See `Docs/BLASTOISE_ARENA.md`. Open `Assets/Scenes/BlastoiseArena.unity` directly
+to test it in Unity. No stage-selection map or music yet.
 Pikachu flashes and emits impact sparks when hit. Taking 25 damage within 2s
 causes a 0.8s stun with orbiting stars, followed by 2s stun protection. A stun
 interrupts a casting ability, sets its cooldown to 2s, and refunds no resources.

@@ -39,7 +39,7 @@ public sealed class PikachuCombat : MonoBehaviour
     public float StunProtectionRemaining { get; private set; }
     private float damageClock;
     private readonly Queue<Vector2> recentHits = new Queue<Vector2>();
-    public bool BattleEnded => Health <= 0 || (Dummy is CharizardBoss && !Dummy.IsAlive);
+    public bool BattleEnded => Health <= 0 || (Dummy is ArenaBoss && !Dummy.IsAlive);
     public void TakeDamage(float damage)
     {
         if (!initialized || Player.IsEntering || BattleEnded || damage <= 0) return;
@@ -245,7 +245,7 @@ public sealed class PikachuCombat : MonoBehaviour
         float regeneratingTime = Mathf.Max(0, delta - regenDelay);
         regenDelay = Mathf.Max(0, regenDelay - delta);
         if (!IsCasting) Mana = Mathf.Min(100, Mana + manaRegen * regeneratingTime);
-        if (!(Dummy is CharizardBoss)) TickProjectiles(delta);
+        if (!(Dummy is ArenaBoss)) TickProjectiles(delta);
         for (int i = Impacts.Count - 1; i >= 0; i--) { Impacts[i].age += delta; if (Impacts[i].age > .65f) Impacts.RemoveAt(i); }
         if (Player.IsEntering) return;
         if (StunRemaining > 0) { Player.CombatPose("Hurt",stunDuration-StunRemaining,Player.FacingVector); return; }
@@ -282,7 +282,7 @@ public sealed class PikachuCombat : MonoBehaviour
             // A targeted discharge: position changes do not break a committed lock.
             Vector2 beamTarget = lockedTarget.transform.position;
             float remainingDamage = data.damage;
-            if (lockedTarget is CharizardBoss boss)
+            if (lockedTarget is ArenaBoss boss)
                 remainingDamage = SpellClash.TraceThunderbolt(this,boss,Position,beamTarget,data.damage,out beamTarget);
             BeamEnd = beamTarget + Vector2.up * .5f;
             BeamRemaining = .32f;
@@ -355,7 +355,7 @@ public sealed class PikachuCombat : MonoBehaviour
         Vector2 offset = Vector2.ClampMagnitude(point - Position, range);
         if (offset.sqrMagnitude < .04f) offset = Player.FacingVector * .2f;
         var p = Position + offset;
-        return new Vector2(Mathf.Clamp(p.x, -PikachuPlayer.MovementBounds.x, PikachuPlayer.MovementBounds.x), Mathf.Clamp(p.y, -PikachuPlayer.MovementBounds.y, PikachuPlayer.MovementBounds.y));
+        return ArenaProgress.Clamp(p,gameObject.scene);
     }
     private bool Reject(string reason) { Message = Feedback = reason; FeedbackRemaining = 2; return false; }
     public bool IsPointOnDummy(Vector2 point) => Dummy && Vector2.Distance(point, (Vector2)Dummy.transform.position + Vector2.up * .6f) <= 1f;

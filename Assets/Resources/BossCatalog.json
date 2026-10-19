@@ -1,0 +1,22 @@
+{
+  "bosses": [
+    {
+      "name": "CHARIZARD",
+      "arena": "ĐẤU TRƯỜNG LỬA",
+      "scene": "CharizardArena",
+      "portrait": "Charizard",
+      "accent": "#DC7144",
+      "frameWidth": 40,
+      "frameHeight": 48
+    },
+    {
+      "name": "BLASTOISE",
+      "arena": "ĐỀN NƯỚC NGẬP",
+      "scene": "BlastoiseArena",
+      "portrait": "Blastoise",
+      "accent": "#4EAECD",
+      "frameWidth": 40,
+      "frameHeight": 40
+    }
+  ]
+}

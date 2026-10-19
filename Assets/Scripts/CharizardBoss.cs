@@ -3,7 +3,7 @@ using UnityEngine;
 
 public enum CharizardSkill { Flamethrower, DragonClaw, AirSlash, FireSpin }
 
-public sealed class CharizardBoss : TrainingDummy
+public sealed class CharizardBoss : ArenaBoss
 {
     public float maximumHealth = 500;
     public float flameDamage = 5, clawDamage = 25, airDamage = 12, spinDamage = 8;
@@ -11,17 +11,13 @@ public sealed class CharizardBoss : TrainingDummy
     public bool AutoAttack = true;
     public int ActiveSkill { get; private set; } = -1;
     public bool WindingUp { get; private set; }
-    public Vector2 LockedDirection { get; private set; } = Vector2.left;
-    public Vector2 CastOrigin { get; private set; }
     public float PhaseTime { get; private set; }
-    public string Status => !IsAlive ? "ĐÃ HẠ GỤC" : ActiveSkill < 0 ? "CHARIZARD" :
+    public override string DisplayName => "Charizard";
+    public override string Status => !IsAlive ? "ĐÃ HẠ GỤC" : ActiveSkill < 0 ? "CHARIZARD" :
         (WindingUp ? "CHUẨN BỊ • " : "") + new[] { "FLAMETHROWER", "DRAGON CLAW", "AIR SLASH", "FIRE SPIN" }[ActiveSkill];
-    public readonly List<BossProjectile> Shots = new List<BossProjectile>();
-    public PikachuCombat Opponent { get; private set; }
     public float Height { get; private set; }
-    public float SpinPower { get; private set; }
-    public bool SpinActive => ActiveSkill==3 && !WindingUp && SpinPower>0;
-    public void ReduceSpin(float power)
+    public override bool SpinActive => ActiveSkill==3 && !WindingUp && SpinPower>0;
+    public override void ReduceSpin(float power)
     {
         SpinPower=Mathf.Max(0,SpinPower-power);
         if(SpinPower<=.0001f) { ActiveSkill=-1; Height=0; recovery=.65f; }
@@ -37,7 +33,7 @@ public sealed class CharizardBoss : TrainingDummy
     private static readonly float[] Windups = { .4f, .8f, .65f, 1.1f };
     private static readonly float[] Durations = { .4f, .5f, .25f, 3f };
 
-    public void InitializeBoss(PikachuCombat opponent, Vector2 position)
+    public override void InitializeBoss(PikachuCombat opponent, Vector2 position)
     {
         Opponent = opponent; transform.position = position; ConfigureHealth(maximumHealth);
         foreach (string clip in new[] { "Idle", "Walk", "Charge", "Shoot", "Attack", "Faint" })

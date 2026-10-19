@@ -22,10 +22,11 @@ public sealed class ArenaPreview : MonoBehaviour
             dummy = new GameObject("Training dummy").AddComponent<TrainingDummy>();
             dummy.Initialize(new Vector2(3, 0));
         }
+        else if(ArenaProgress.IsWater) dummy = new GameObject("Boss - Blastoise").AddComponent<BlastoiseBoss>();
         else dummy = new GameObject("Boss - Charizard").AddComponent<CharizardBoss>();
         combat = player.gameObject.AddComponent<PikachuCombat>();
         combat.Initialize(player, dummy);
-        if (dummy is CharizardBoss boss) boss.InitializeBoss(combat, new Vector2(4, 0));
+        if (dummy is ArenaBoss boss) boss.InitializeBoss(combat, new Vector2(4, 0));
         gameObject.AddComponent<CombatHud>().Initialize(combat);
     }
 
@@ -79,7 +80,7 @@ public sealed class ArenaPreview : MonoBehaviour
         }
         var label = new GUIStyle(GUI.skin.label) { fontSize = 18 };
         label.normal.textColor = new Color32(241, 196, 90, 255);
-        GUI.Label(new Rect(24, 16, 500, 30), "MÀN 01 / ĐẤU TRƯỜNG CHARIZARD", label);
+        GUI.Label(new Rect(24, 16, 500, 30), ArenaProgress.IsWater?"MÀN 02 / ĐỀN NƯỚC NGẬP":"MÀN 01 / ĐẤU TRƯỜNG CHARIZARD", label);
         GUI.enabled = !entering && (!combat || !combat.MovementLocked);
         if (GUI.Button(new Rect(Screen.width - 310, 16, 140, 32), "Xem lại xuất hiện") && player) player.ReplayEntrance();
         GUI.enabled = true;

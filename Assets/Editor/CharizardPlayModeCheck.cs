@@ -25,6 +25,7 @@ public static class CharizardPlayModeCheck
     }
     private static void Attach()
     {
+        ArenaProgress.SuppressSaving=true;
         ArenaPreview.TrainingMode=false; stage=0; clashChecked=false; deadline=EditorApplication.timeSinceStartup+100;
         EditorApplication.update-=Tick; EditorApplication.update+=Tick;
         Application.logMessageReceived-=OnLog; Application.logMessageReceived+=OnLog;

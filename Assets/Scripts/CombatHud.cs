@@ -49,7 +49,7 @@ public sealed class CombatHud : MonoBehaviour
         float scale=Mathf.Min(Screen.width/1280f,Screen.height/720f);
         GUI.matrix=Matrix4x4.TRS(new Vector3((Screen.width-1280*scale)/2,(Screen.height-720*scale)/2),Quaternion.identity,new Vector3(scale,scale,1));
         Fill(new Rect(16,64,255,115),Panel);
-        bool bossFight=combat.Dummy is CharizardBoss;
+        bool bossFight=combat.Dummy is ArenaBoss;
         Text(new Rect(30,74,225,25),bossFight?"PIKACHU":"PIKACHU  /  LUYỆN TẬP",16,Gold);
         Text(new Rect(30,104,210,22),"HP  "+Mathf.CeilToInt(combat.Health)+" / 200",13,Color.white);
         Bar(new Rect(30,128,225,5),combat.Health/200,new Color32(93,207,138,255));
@@ -68,18 +68,18 @@ public sealed class CombatHud : MonoBehaviour
             combat.Dummy.Immune=GUI.Toggle(new Rect(30,292,220,22),combat.Dummy.Immune,"Miễn nhiễm sát thương");
             if(GUI.Button(new Rect(30,322,106,28),"Hồi hình nhân")) combat.Dummy.ResetDummy();
             if(GUI.Button(new Rect(145,322,110,28),"Nạp thử 15 sét")) combat.RefillTrainingResources();
-            if(GUI.Button(new Rect(30,359,225,28),"ĐÁNH LẠI • xóa hố trên sân")) SceneManager.LoadScene("CharizardArena");
+            if(GUI.Button(new Rect(30,359,225,28),"ĐÁNH LẠI • xóa hố trên sân")) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         GUI.enabled=enabled;
         if(bossFight && GUI.Button(new Rect(30,269,225,32),"Chuyển sang hình nhân"))
-        { ArenaPreview.TrainingMode=true; SceneManager.LoadScene("CharizardArena"); }
-        if(!bossFight && GUI.Button(new Rect(30,401,225,30),"Đấu Charizard"))
-        { ArenaPreview.TrainingMode=false; SceneManager.LoadScene("CharizardArena"); }
+        { ArenaPreview.TrainingMode=true; SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
+        if(!bossFight && GUI.Button(new Rect(30,401,225,30),ArenaProgress.IsWater?"Đấu Blastoise":"Đấu Charizard"))
+        { ArenaPreview.TrainingMode=false; SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
         }
 
         if(bossFight)
         {
-            var boss=(CharizardBoss)combat.Dummy;
+            var boss=(ArenaBoss)combat.Dummy;
             Fill(new Rect(420,65,440,63),Panel);
             Text(new Rect(430,68,420,25),boss.Status+"   "+Mathf.CeilToInt(boss.Health)+" / "+boss.HealthCapacity,15,Gold,TextAnchor.MiddleCenter);
             Bar(new Rect(436,103,408,10),boss.Health/boss.HealthCapacity,new Color32(230,85,48,255));
@@ -105,9 +105,10 @@ public sealed class CombatHud : MonoBehaviour
         for(int i=0;i<4;i++) DrawSkill(i,IconRect(i));
         if(combat.BattleEnded)
         {
-            Fill(new Rect(390,255,500,190),Panel);
-            Text(new Rect(410,275,460,60),combat.Health>0?"CHIẾN THẮNG!\nĐã hạ gục Charizard":"PIKACHU ĐÃ GỤC",26,Gold,TextAnchor.MiddleCenter);
-            if(GUI.Button(new Rect(505,367,270,45),"ĐÁNH LẠI")) SceneManager.LoadScene("CharizardArena");
+            Fill(new Rect(390,255,500,combat.Health>0 && combat.Dummy is CharizardBoss?220:190),Panel);
+            Text(new Rect(410,275,460,60),combat.Health>0?"CHIẾN THẮNG!\nĐã hạ gục "+((ArenaBoss)combat.Dummy).DisplayName:"PIKACHU ĐÃ GỤC",26,Gold,TextAnchor.MiddleCenter);
+            if(GUI.Button(new Rect(505,367,270,45),"ĐÁNH LẠI")) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if(combat.Health>0 && combat.Dummy is CharizardBoss && GUI.Button(new Rect(505,420,270,40),"MÀN 02 • ĐỀN NƯỚC NGẬP")) ArenaProgress.Enter("BlastoiseArena");
         }
         GUI.matrix=previous;
     }

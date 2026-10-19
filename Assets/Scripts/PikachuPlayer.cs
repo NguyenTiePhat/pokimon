@@ -127,7 +127,7 @@ public sealed class PikachuPlayer : MonoBehaviour
         Vector2 movement = Vector2.ClampMagnitude(input, 1);
         Vector3 previous = transform.position;
         Vector3 next = previous + (Vector3)movement * (MoveSpeed * (combat ? combat.SpeedMultiplier : 1) * Mathf.Max(0, deltaTime));
-        transform.position = new Vector3(Mathf.Clamp(next.x, -MovementBounds.x, MovementBounds.x), Mathf.Clamp(next.y, -MovementBounds.y, MovementBounds.y), 0);
+        transform.position = ArenaProgress.Clamp(next,gameObject.scene);
         float distance = Vector3.Distance(previous, transform.position);
         bool moving = distance > .00001f;
         if (movement.sqrMagnitude > .001f) FacingDirection = DirectionFor(movement);
@@ -176,7 +176,7 @@ public sealed class PikachuPlayer : MonoBehaviour
 
     public void CombatMove(Vector2 position, Vector2 facing, float animationTime, float height = 0, bool tail = false)
     {
-        transform.position = new Vector3(Mathf.Clamp(position.x, -MovementBounds.x, MovementBounds.x), Mathf.Clamp(position.y, -MovementBounds.y, MovementBounds.y), 0);
+        transform.position = ArenaProgress.Clamp(position,gameObject.scene);
         CombatPose(tail ? "Swing" : "Walk", animationTime, facing, height);
         IsMoving = true;
     }

@@ -119,7 +119,10 @@ public static class ArenaSetup
         }
         new GameObject("Arena navigation").AddComponent<ArenaPreview>();
         EditorSceneManager.SaveScene(scene,"Assets/Scenes/CharizardArena.unity");
-        EditorBuildSettings.scenes = new[] {new EditorBuildSettingsScene("Assets/Scenes/MainMenu.unity",true),new EditorBuildSettingsScene("Assets/Scenes/CharizardArena.unity",true)};
+        var buildScenes=new System.Collections.Generic.List<EditorBuildSettingsScene>(EditorBuildSettings.scenes);
+        foreach(var path in new[]{"Assets/Scenes/MainMenu.unity","Assets/Scenes/CharizardArena.unity"})
+            if(!buildScenes.Exists(x=>x.path==path)) buildScenes.Add(new EditorBuildSettingsScene(path,true));
+        EditorBuildSettings.scenes=buildScenes.ToArray();
         AssetDatabase.SaveAssets();
         Debug.Log("ARENA_SETUP_OK: floor, markings, 10 animated fires, scene and build settings.");
         // Render the actual scene as a reviewable image when a graphics device is available.

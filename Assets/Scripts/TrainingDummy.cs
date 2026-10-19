@@ -50,7 +50,7 @@ public class TrainingDummy : MonoBehaviour
         }
         if (art != null) art.Renderer.color = !IsAlive ? new Color(.45f,.45f,.45f,1) : hitFlash > 0 ? new Color(1,.55f,.4f,1) : Immune ? new Color(.5f,.8f,1,1) : Color.white;
     }
-    public bool TakeDamage(float damage)
+    public virtual bool TakeDamage(float damage)
     {
         if (!IsAlive) return false;
         if (Immune) { LastResult = "MIỄN NHIỄM"; LastDamage = 0; return false; }

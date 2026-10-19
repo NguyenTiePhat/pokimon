@@ -4,13 +4,31 @@ using UnityEngine;
 // later character hit, including projectiles that cross completely in one frame.
 public static class SpellClash
 {
+    public static void ResolveStreamOverlaps(PikachuCombat player,ArenaBoss boss)
+    {
+        while(boss.SpinActive)
+        {
+            int nearest=-1; float distance=float.MaxValue;
+            for(int i=0;i<player.Projectiles.Count;i++)
+            {
+                var ball=player.Projectiles[i];
+                if(!boss.StreamContact(ball.Position,Vector2.zero,Radius(ball),0,out _)) continue;
+                float d=Vector2.Distance(boss.CastOrigin,ball.Position);
+                if(d<distance) { nearest=i; distance=d; }
+            }
+            if(nearest<0) return;
+            var shot=player.Projectiles[nearest]; float consumed=Mathf.Min(shot.damage,boss.SpinPower);
+            player.ClashExplosion(shot.Position,consumed*2); shot.damage-=consumed; boss.ReduceSpin(consumed);
+            if(shot.damage<=Epsilon) player.Projectiles.RemoveAt(nearest);
+        }
+    }
     private const float Epsilon=.00001f;
     private struct Contact
     {
         public int kind, electric, enemy;
         public float time;
     }
-    public static void Step(PikachuCombat player,CharizardBoss boss,float delta)
+    public static void Step(PikachuCombat player,ArenaBoss boss,float delta)
     {
         float left=Mathf.Max(0,delta);
         while(left>Epsilon && !player.BattleEnded)
@@ -27,7 +45,7 @@ public static class SpellClash
                     if(Sweep(ball.Position-shot.position,velocity-shot.direction*shot.speed,Radius(ball)+shot.radius,limit,out float t))
                         Consider(ref contact,0,i,j,t);
                 }
-                if(boss.SpinActive && ConeContact(boss,ball.Position,velocity,Radius(ball),horizon,out float spinTime))
+                if(boss.SpinActive && boss.StreamContact(ball.Position,velocity,Radius(ball),horizon,out float spinTime))
                     Consider(ref contact,1,i,-1,spinTime);
             }
             for(int i=0;i<player.Projectiles.Count;i++)
@@ -73,7 +91,7 @@ public static class SpellClash
             else
             {
                 var shot=boss.Shots[contact.enemy]; boss.Shots.RemoveAt(contact.enemy);
-                if(contact.kind==3) player.TakeDamage(shot.damage);
+                boss.ProjectileImpact(shot,contact.kind==3);
             }
         }
     }
@@ -97,7 +115,7 @@ public static class SpellClash
         return time>=0 && time<=horizon;
     }
     // Clip a swept circle against the live Fire Spin trapezoid in ground space.
-    public static bool ConeContact(CharizardBoss boss,Vector2 origin,Vector2 velocity,float radius,float horizon,out float time)
+    public static bool ConeContact(ArenaBoss boss,Vector2 origin,Vector2 velocity,float radius,float horizon,out float time)
     {
         Vector2 axis=boss.LockedDirection, side=new Vector2(-axis.y,axis.x), offset=origin-boss.CastOrigin;
         float x=Vector2.Dot(offset,axis), y=Vector2.Dot(offset,side);
@@ -115,7 +133,7 @@ public static class SpellClash
         if(rate>0) enter=Mathf.Max(enter,t); else exit=Mathf.Min(exit,t);
         return enter<=exit;
     }
-    public static float TraceThunderbolt(PikachuCombat player,CharizardBoss boss,Vector2 start,Vector2 end,float power,out Vector2 beamEnd)
+    public static float TraceThunderbolt(PikachuCombat player,ArenaBoss boss,Vector2 start,Vector2 end,float power,out Vector2 beamEnd)
     {
         Vector2 segment=end-start;
         beamEnd=end;
@@ -125,7 +143,7 @@ public static class SpellClash
             for(int i=0;i<boss.Shots.Count;i++)
                 if(Sweep(start-boss.Shots[i].position,segment,boss.Shots[i].radius+.1f,1,out float t) && t<nearest)
                 { nearest=t; index=i; }
-            if(boss.SpinActive && ConeContact(boss,start,segment,.1f,1,out float streamTime) && streamTime<nearest)
+            if(boss.SpinActive && boss.StreamContact(start,segment,.1f,1,out float streamTime) && streamTime<nearest)
             { nearest=streamTime; index=-1; spin=true; }
             if(nearest>1) break;
             Vector2 point=start+segment*nearest;

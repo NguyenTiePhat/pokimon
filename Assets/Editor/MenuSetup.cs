@@ -17,7 +17,9 @@ public static class MenuSetup
         camera.backgroundColor = new Color32(10, 19, 29, 255);
         new GameObject("Main Menu").AddComponent<MainMenu>();
         EditorSceneManager.SaveScene(scene, "Assets/Scenes/MainMenu.unity");
-        EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene("Assets/Scenes/MainMenu.unity", true) };
+        var buildScenes=new System.Collections.Generic.List<EditorBuildSettingsScene>(EditorBuildSettings.scenes);
+        if(!buildScenes.Exists(x=>x.path=="Assets/Scenes/MainMenu.unity")) buildScenes.Insert(0,new EditorBuildSettingsScene("Assets/Scenes/MainMenu.unity",true));
+        EditorBuildSettings.scenes=buildScenes.ToArray();
         PlayerSettings.productName = "Pokemon Boss Arena";
         PlayerSettings.companyName = "PokemonPrototype";
         PlayerSettings.defaultScreenWidth = 1280;

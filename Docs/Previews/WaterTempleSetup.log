@@ -1,0 +1,405 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.5/staging' branch; Version is '6000.5.7f1 (017862109af0) revision 96354'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Channel LicenseClient-admin doesn't exist
+OS: 'Windows 11  (10.0.26300) CoreSingleLanguage' Language: 'en' Physical Memory: 11995 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-18T18:29:30Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 21912)
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\6000.5.7f1\Editor\Unity.exe
+-batchmode
+-projectPath
+D:/UnityProjects/PokemonBossArena
+-executeMethod
+WaterTempleSetup.Create
+-quit
+-logFile
+D:/UnityProjects/PokemonBossArena/Docs/Previews/WaterTempleSetup.log
+Successfully changed project path to: D:/UnityProjects/PokemonBossArena
+D:/UnityProjects/PokemonBossArena
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.Player connection [8500]  Target information:
+
+Player connection [8500]  * "[IP] 192.168.1.137 [Port] 55504 [Flags] 2 [Guid] 2132956480 [EditorId] 2132956480 [Version] 1048832 [Id] WindowsEditor(7,PCcuaPhat) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [8500] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8500] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-19308" after 1.1 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-admin" at "2026-10-18T18:29:40.189315Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 21912, path: "D:/Unity/6000.5.7f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              218ae957287645e1b2c058077735dd4d
+  Correlation Id:          4541a834f84c5c0497c184e4a4d2e81d
+  External correlation Id: 4898238359295054354
+  Machine Id:              Lhf/sAuseKZLr3d/xUxfAzPNncs=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-admin" (connect: 9.85s, validation: 0.84s, handshake: 1.14s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-admin-notifications" at "2026-10-18T18:29:42.1687418Z"
+[Licensing::Module] Connected to LicensingClient (PId: 21912, launch time: 0.10, total connection time: 11.83s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 18968478618703-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.04
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 12.23s
+[Licensing::Module] Licensing is initialized (took 5.80s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.5.7f1 (017862109af0)
+[Subsystems] Discovering subsystems at path D:/Unity/6000.5.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/UnityProjects/PokemonBossArena/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 3050 6GB Laptop GPU (ID=0x25ec)
+    Vendor:          NVIDIA
+    VRAM:            6002 MB
+    App VRAM Budget: 5234 MB
+    Driver:          32.0.15.8186
+Initialize mono
+Mono path[0] = 'D:/Unity/6000.5.7f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/6000.5.7f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'D:/Unity/6000.5.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/6000.5.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56308
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/6000.5.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.848712 seconds.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.857 seconds
+Domain Reload Profiling: 20261ms
+	BeginReloadAssembly (1601ms)
+		CreateAndSetChildDomain (13ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (682ms)
+	initialDomainReloadingComplete (1729ms)
+	LoadAllAssembliesAndSetupDomain (13350ms)
+		LoadAssemblies (1584ms)
+		AnalyzeDomain (12835ms)
+			TypeCache.Refresh (12828ms)
+				TypeCache.ScanAssembly (11560ms)
+	FinalizeReload (2870ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			BeforeProcessingInitializeOnLoad (631ms)
+			ProcessInitializeOnLoadAttributes (930ms)
+			ProcessInitializeOnLoadMethodAttributes (1080ms)
+			EditorAssembliesLoaded (3ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 4 packages:
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: D:\UnityProjects\PokemonBossArena\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: D:\UnityProjects\PokemonBossArena\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.screencapture@1.0.0 (location: D:\UnityProjects\PokemonBossArena\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\UnityProjects\PokemonBossArena\Library\PackageCache\com.unity.modules.imageconversion)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.03 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: D:\Unity\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/UnityProjects/PokemonBossArena
+DisplayProgressbar: Compiling Scripts
+ExitCode: 4 Duration: 17s
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+[BUSY       6s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+[BUSY      16s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+*** Tundra requires additional run (16.79 seconds), 1 items updated, 160 evaluated
+Starting: D:\Unity\6000.5.7f1\Editor\Data\netcorerun\netcorerun.exe "D:\Unity\6000.5.7f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: D:/UnityProjects/PokemonBossArena
+ExitCode: 0 Duration: 6s411ms
+Starting: D:\Unity\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: D:/UnityProjects/PokemonBossArena
+ExitCode: 0 Duration: 10s
+Finished compiling graph: 170 nodes, 614 flattened edges (604 ToBuild, 4 ToUse), maximum node priority 18
+[156/167    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[157/167    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.rsp
+[161/167    2s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+Assets\Scripts\WaterTempleEffects.cs(19,28): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+[162/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[163/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[BUSY       6s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[164/167    7s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+Assets\Editor\PikachuPlayModeCheck.cs(61,63): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Editor\PikachuPlayModeCheck.cs(61,23): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Editor\CharizardPlayModeCheck.cs(39,18): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Editor\CharizardPlayModeCheck.cs(42,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+[165/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[166/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (10.25 seconds), 8 items updated, 167 evaluated
+Assets\Scripts\WaterTempleEffects.cs(19,28): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Editor\PikachuPlayModeCheck.cs(61,63): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Editor\PikachuPlayModeCheck.cs(61,23): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Editor\CharizardPlayModeCheck.cs(39,18): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Editor\CharizardPlayModeCheck.cs(42,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+AssetDatabase: script compilation time: 51.978960s
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: D:\Unity\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/UnityProjects/PokemonBossArena
+Starting: D:\Unity\6000.5.7f1\Editor\Data\netcorerun\netcorerun.exe "D:\Unity\6000.5.7f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: D:/UnityProjects/PokemonBossArena
+ExitCode: 4 Duration: 0s132ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+*** Tundra requires additional run (0.03 seconds), 0 items updated, 52 evaluated
+ExitCode: 0 Duration: 0s967ms
+Starting: D:\Unity\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: D:/UnityProjects/PokemonBossArena
+Assets\Editor\PikachuPlayModeCheck.cs(61,63): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Editor\PikachuPlayModeCheck.cs(61,23): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Assets\Editor\CharizardPlayModeCheck.cs(39,18): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Editor\CharizardPlayModeCheck.cs(42,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+ExitCode: 0 Duration: 1s934ms
+Finished compiling graph: 170 nodes, 614 flattened edges (604 ToBuild, 4 ToUse), maximum node priority 18
+[163/167    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.rsp
+[164/167    1s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+Assets\Editor\PikachuPlayModeCheck.cs(61,63): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Editor\PikachuPlayModeCheck.cs(61,23): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+
+Assets\Editor\CharizardPlayModeCheck.cs(39,18): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Editor\CharizardPlayModeCheck.cs(42,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+[165/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[166/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (1.79 seconds), 4 items updated, 167 evaluated
+Begin MonoManager ReloadAssembly
+Total cache size 266386480
+Total cache size after purge 266386480, took 00:00:06.0775984
+Importing 'GUID: 8f846ad25ac69c9469ce144036f6556b - Path: Assets/Resources/BlastoiseBoss' with importer (DefaultImporter)
+Imported 'GUID: 8f846ad25ac69c9469ce144036f6556b' -> (Import Result ID: 'e2f1b61064e789a0c15a03e588c3ff5b') in 0.130 seconds [static dependencies only]. Details - ImportResultOutputID=a95ba764971f47fd3f7bbf6b3e0605dc DependenciesID=e219d29d6c01dcfdbaba8788ea83518d StaticDependenciesID=827438e0c05a537074f7aac89a93ab30 
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  2.754 seconds
+Domain Reload Profiling: 5881ms
+	BeginReloadAssembly (1949ms)
+		DisableScriptedObjects (140ms)
+		CreateAndSetChildDomain (395ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (94ms)
+	initialDomainReloadingComplete (387ms)
+	LoadAllAssembliesAndSetupDomain (650ms)
+		LoadAssemblies (1327ms)
+		AnalyzeDomain (55ms)
+			TypeCache.Refresh (26ms)
+			BuildScriptInfoCaches (18ms)
+	FinalizeReload (2765ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			BeforeProcessingInitializeOnLoad (690ms)
+			ProcessInitializeOnLoadAttributes (547ms)
+			ProcessInitializeOnLoadMethodAttributes (484ms)
+			AfterProcessingInitializeOnLoad (21ms)
+		AwakeInstancesAfterBackupRestoration (167ms)
+Importing 'GUID: 363c4f2dd6513ae43be305c59af286ac - Path: Assets/Resources/BlastoiseBoss/Attack-Anim.png' with importer (TextureImporter)
+Imported 'GUID: 363c4f2dd6513ae43be305c59af286ac' -> (Import Result ID: '9e59af491b181b0d7f0d709ce6cdc693') in 0.186 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ceebfea21508ad0708aa7a635c741b01 DependenciesID=c3c69a886eba979a7c67118d03afbb6b StaticDependenciesID=5a44a772e8d9bfa7e45012421fb588cc 
+Importing 'GUID: 36ed5b3cb93755d41af82685ebb78024 - Path: Assets/Resources/BlastoiseBoss/Shoot-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: 36ed5b3cb93755d41af82685ebb78024' -> (Import Result ID: '16f3693e41c0a3829428ad47421c9790') in 0.058 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a963ff27cd48e94dfffe27b04ecc85fb DependenciesID=8a49c58300f4a3274f325bbf75ca34c9 StaticDependenciesID=899ff14f8df830d1d8753ee227835c4a 
+Importing 'GUID: 18f0798319894404ca68f1c013a08de4 - Path: Assets/Resources/BlastoiseBoss/Walk-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: 18f0798319894404ca68f1c013a08de4' -> (Import Result ID: '0887b2593cda58a3ac01802389cd7230') in 0.051 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fa759de26de1049143bb1135b7bf4e52 DependenciesID=47cedff6cb401bf57ad2021cbd22e93d StaticDependenciesID=dc17aadf5348f15f150b29766228a398 
+Importing 'GUID: b812a79cb9e3a7e40ab266ba60085243 - Path: Assets/Resources/BlastoiseBoss/Idle-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: b812a79cb9e3a7e40ab266ba60085243' -> (Import Result ID: '725e2caf49a3f3f770e0c8ef78916b0f') in 0.048 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3321a354861e50ebc9054bc941201c4d DependenciesID=f12efd286dd21095629083e5cddd2c67 StaticDependenciesID=5bcffbee8242a1e6944b6e3dbaecee78 
+Importing 'GUID: f8d2b644d9bc336449298e95949f6cc1 - Path: Assets/Resources/BlastoiseBoss/Rotate-Anim.png' with importer (TextureImporter)
+Imported 'GUID: f8d2b644d9bc336449298e95949f6cc1' -> (Import Result ID: '152b3c363dd93f28c5c063ce43748a30') in 0.051 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4071fc8da68fbfc86ac4569302e68ee6 DependenciesID=f5cd2d230d21b834aa591a47fedea71a StaticDependenciesID=4bc55ba108870af09290546f2e93f51e 
+Importing 'GUID: 0903619b29b0fcf4ea7ac990aad490ff - Path: Assets/Resources/BlastoiseBoss/Walk-Anim.png' with importer (TextureImporter)
+Imported 'GUID: 0903619b29b0fcf4ea7ac990aad490ff' -> (Import Result ID: '55c51dda3d06ad898d5648a5fd67c03d') in 0.045 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8978e90ef83b361a82623a4f76d2e22d DependenciesID=a624c33b9c4fd9b13ef99a273b0091cb StaticDependenciesID=82b1c9a69552804e41d8dc2bfd730c20 
+Importing 'GUID: f91f20d9cc14c5e41a97a9c5fe10aa55 - Path: Assets/Resources/BlastoiseBoss/Rotate-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: f91f20d9cc14c5e41a97a9c5fe10aa55' -> (Import Result ID: '1de2dcc0ba3250e82f025367a979d964') in 0.061 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ffd2ce4b814f16cf9c85f6e387a8eeb7 DependenciesID=bc52493ab1fdee618f6505322c620e2b StaticDependenciesID=20f2772385dcef3d93d45bb84b9e8407 
+Importing 'GUID: fc237d2563082834c918c33da375d3ec - Path: Assets/Resources/BlastoiseBoss/Idle-Anim.png' with importer (TextureImporter)
+Imported 'GUID: fc237d2563082834c918c33da375d3ec' -> (Import Result ID: '0cb540db6471ac9c54d1d3dd49deb4b8') in 0.038 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6590492774a08a399efe3612da571a69 DependenciesID=8714bf92666c618ae59a0f9b66484944 StaticDependenciesID=8e125f511fd4f6e8e35496e4b17a967e 
+Importing 'GUID: 4e4062d3186e4db4dbe58e09876d38cc - Path: Assets/Resources/BlastoiseBoss/Shoot-Anim.png' with importer (TextureImporter)
+Imported 'GUID: 4e4062d3186e4db4dbe58e09876d38cc' -> (Import Result ID: '4e863c74c36c53733b2c4dfb6b6bf18e') in 0.062 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=18eb0409169c1a8a4066c8c1e3849b07 DependenciesID=425cda55753a56c23ec546160f3faca4 StaticDependenciesID=84559d7283886f6d8cba72969c234a4c 
+Importing 'GUID: af016b14ba0df254881e03022d70152f - Path: Assets/Resources/BlastoiseBoss/Charge-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: af016b14ba0df254881e03022d70152f' -> (Import Result ID: '3fbbcf15d7e717db5772d5ba7b7cff2d') in 0.042 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4c879d8534832cddf45cfe7a730c5052 DependenciesID=a09976739f245e70c4790dbea21b04fa StaticDependenciesID=ec4e276b282a73b6f81dacffa515e637 
+Importing 'GUID: cf085d3a6445ef246912d914de822e77 - Path: Assets/Resources/BlastoiseBoss/Attack-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: cf085d3a6445ef246912d914de822e77' -> (Import Result ID: 'c37a1ec113b55e1b2977aeb551c05aad') in 0.064 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=14c19ac3e6e4b2adf87224ace8ff7228 DependenciesID=d4f0c2b68095b0626d287231d0391b6a StaticDependenciesID=6906ddb3afb49c69a4e505ce58e51fa7 
+Importing 'GUID: dfe88fd18e4f47a41a40cb5334999226 - Path: Assets/Resources/BlastoiseBoss/Charge-Anim.png' with importer (TextureImporter)
+Imported 'GUID: dfe88fd18e4f47a41a40cb5334999226' -> (Import Result ID: 'e4a0629902529e091f7b064c72b2c269') in 0.039 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=77871fa43df7f4d8ca5d805ee407bcd3 DependenciesID=bde79800b723140a0fa05f61988ab7ae StaticDependenciesID=5bd7ee3e4678a5efab6a2cf5eabfcb3d 
+Importing 'GUID: aac00557e09154a49ab8411d8bfe3eeb - Path: Assets/Resources/BlastoiseBoss/AnimData.xml' with importer (TextScriptImporter)
+Imported 'GUID: aac00557e09154a49ab8411d8bfe3eeb' -> (Import Result ID: '302b7806df4fb8390919f3256421a93d') in 0.068 seconds [static dependencies only]. Details - ImportResultOutputID=3a3b712abc8a78e42ed96ac824eea8d3 DependenciesID=56dd4112e3ba2ae870764b10996a9797 StaticDependenciesID=d897dafe7164c14eaa29d26b47f25dde 
+Importing 'GUID: bcc56d9718c2b3d48b057909d8964ebe - Path: Assets/Resources/BlastoiseBoss/credits.txt' with importer (TextScriptImporter)
+Imported 'GUID: bcc56d9718c2b3d48b057909d8964ebe' -> (Import Result ID: 'f54830332e85bdf1d6c6e4bb7c86c961') in 0.047 seconds [static dependencies only]. Details - ImportResultOutputID=cb4cb36257df4674c01cff4d3091d1a9 DependenciesID=5f51cfce0212cabc2c1bf78481f44435 StaticDependenciesID=5ef31cbb17d7aff095ac32e4a347abee 
+Starting new worker id: 0 with log in D:/UnityProjects/PokemonBossArena/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=af74dae8370d1364ea32d566fb08d14d): Total: 66.257 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=15 (actual=15, local cache=0, cache server=0)
+		Asset DB Process Time: managed=37 ms, native=5990 ms
+		Asset DB Callback time: managed=422 ms, native=180 ms
+		Scripting: domain reloads=1, domain reload time=3268 ms, compile time=56339 ms, other=17 ms
+		Project Asset Count: scripts=39, non-scripts=60
+		Asset File Changes: new=22, changed=31, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 174.167ms
+	ApplyChangesToAssetFolders: 1.176ms
+	Scan: 894.835ms
+	Collect global state as custom dependencies: 67.833ms
+	OnSourceAssetsModified: 5.447ms
+	CategorizeScriptCompilationAssets: 0.810ms
+	ProcessAssetsWithTransientArtifactChanges: 8.745ms
+	CategorizeAssets: 1.791ms
+	CompileScripts: 56339.335ms
+	ImportOutOfDateAssets: 3862.591ms (2792.427ms without children)
+		ImportManagerImport: 1016.508ms (12.887ms without children)
+			UpdateCategorizedAssets: 0.350ms
+		UnloadImportedAssets: 0.997ms
+		ImportSchedulerStart: 52.600ms
+	PostProcessAllAssets: 424.743ms
+		VersionControlSettings.HiddenFilePostprocess 0.905ms
+		Canvas.OnAllAssetImport 0.276ms
+		PostProcessCallbackCreateDeferredMaterials 0.194ms
+		ComputeShaderImportPostprocess 0.146ms
+		LocalizationDatabase.AssetDatabasePostprocessCallback 0.104ms
+		RaytracingShaderImportPostprocess 0.103ms
+		ShaderAssetModifiedCallback 0.101ms
+		SpeedTreeImporter.PostprocessAllAssets 0.081ms
+		AssemblyValidation.PostprocessAllAssets 0.077ms
+		MonoPostProcessAllAssets: 416.333ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 105.163ms
+			SyncVS.PostprocessSyncProject 71.859ms
+			AssetPostprocessor.OnPostprocessAllAssets 59.588ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 43.311ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 29.231ms
+			AssetChangedListener.OnPostprocessAllAssets 10.786ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 8.899ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 5.651ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 5.475ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 3.070ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 2.959ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 2.590ms
+			AssetEvents.OnPostprocessAllAssets 1.801ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 1.782ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 1.723ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 1.722ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 1.448ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 1.235ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.710ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.393ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.244ms
+	PostAssetChangesProfiler: 7.159ms
+	UnloadStreamsBegin: 5.173ms
+	PersistCurrentRevisions: 0.406ms
+	GenerateScriptTypeHashes: 0.341ms
+	Untracked: 4418.878ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Scanning for USB devices : 6.655ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Pokemon Boss Arena
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 45 unused Assets / (0.5 MB). Loaded Objects now: 694.
+Memory consumption went from 193.4 MB to 192.9 MB.
+Total: 19.664500 ms (FindLiveObjects: 0.117100 ms CreateObjectMapping: 0.028800 ms MarkObjects: 18.097400 ms  DeleteObjects: 0.772700 ms)
+
+Importing 'GUID: e5ba721feb0b2704e83753e545cbeae9 - Path: Assets/Art/Arena/BlastoiseWaterTemple.png' with importer (TextureImporter)
+Imported 'GUID: e5ba721feb0b2704e83753e545cbeae9' -> (Import Result ID: 'b527c351d665c1102cf6d8fcf135a9a5') in 0.081 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=66dbab1ad3c9a5308076bf5f29d9fc3d DependenciesID=4ac6377dc16796bdd4b5b7c86ba3cbb3 StaticDependenciesID=dcb8ee01093fa3cef1ac5147c859ea73 
+Asset Pipeline Refresh (id=71fe3bf4ebd0e604a92d74deb6528896): Total: 0.234 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: e5ba721feb0b2704e83753e545cbeae9 - Path: Assets/Art/Arena/BlastoiseWaterTemple.png' with importer (TextureImporter)
+Imported 'GUID: e5ba721feb0b2704e83753e545cbeae9' -> (Import Result ID: '4f34b30b07373da0ef783328b6cee89b') in 0.041 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=13d1ff220d23558374a5e3c05ead7c79 DependenciesID=ed9aa807f3f2683b0de6c41d809861d9 StaticDependenciesID=b07557cb468c4315168cdbb48d30a276 
+Asset Pipeline Refresh (id=83dc0b6803480bd42b0692dc9012ebe5): Total: 0.142 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2 unused Assets / (1.4 KB). Loaded Objects now: 694.
+Memory consumption went from 189.5 MB to 189.5 MB.
+Total: 16.486800 ms (FindLiveObjects: 0.088000 ms CreateObjectMapping: 0.025800 ms MarkObjects: 16.122900 ms  DeleteObjects: 0.246500 ms)
+
+Importing 'GUID: 8510163315c3abc43bb69d968954ec26 - Path: Assets/Scenes/BlastoiseArena.unity' with importer (DefaultImporter)
+Imported 'GUID: 8510163315c3abc43bb69d968954ec26' -> (Import Result ID: '110e8f7c91be89d4c8c0d6ee35b82809') in 0.006 seconds [static dependencies only]. Details - ImportResultOutputID=927d691d084daaa50a6198f31ad47776 DependenciesID=343cd6a198f55b26634f70112641bcc0 StaticDependenciesID=f6a29268b0ee21f1baf9fe1fea0c0395 
+Asset Pipeline Refresh (id=6d914d576c1b1c3488e8324b57aea5c1): Total: 0.087 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+AcceleratorClientConnectionCallback - disconnected - :0
+Importing 'GUID: 0000000000000000b000000000000000 - Path: ProjectSettings/EditorBuildSettings.asset' with importer (LibraryAssetImporter)
+Imported 'GUID: 0000000000000000b000000000000000' -> (Import Result ID: 'fa0adc6cb0e5fa9b68dce3f29a19ca5e') in 0.005 seconds [static dependencies only]. Details - ImportResultOutputID=4647dd083cfc32cebcd7526e8846440c DependenciesID=4ba0eaec7b773f1e37970eff60cf7f02 StaticDependenciesID=444bc538285bf56e0845f64dc408bcbe 
+Asset Pipeline Refresh (id=b13a4ae9521ca7e4aadfcb3d23399423): Total: 0.121 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+WATER_TEMPLE_SETUP_OK: circular arena, shrine, channels, columns, scene and build registration.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+WaterTempleSetup:Create () (at Assets/Editor/WaterTempleSetup.cs:88)
+
+(Filename: Assets/Editor/WaterTempleSetup.cs Line: 88)
+
+[Licensing::Client] Successfully resolved entitlement details
+Batchmode quit successfully invoked - shutting down!
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-admin-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-admin channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Exiting batchmode successfully now!
+Exiting without the bug reporter. Application will terminate with return code 0
