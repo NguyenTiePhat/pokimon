@@ -1,0 +1,1 @@
+LUCARIO_PLAYER_OK: Windows standalone, page-two portrait, four warning/action HUDs, victory, 1280x720 and 960x540, no runtime errors.

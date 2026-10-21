@@ -21,6 +21,7 @@ public sealed class CombatHud : MonoBehaviour
         if (p.y < 60 || new Rect(16,64,255,153).Contains(p)) return true;
         if (trainingOpen && new Rect(16,226,255,210).Contains(p)) return true;
         if (new Rect(420,65,440,63).Contains(p)) return true;
+        if (ArenaProgress.IsDojo && new Rect(362,580,556,32).Contains(p)) return true;
         for(int i=0;i<4;i++) if(IconRect(i).Contains(p)) return true;
         return false;
     }
@@ -73,7 +74,7 @@ public sealed class CombatHud : MonoBehaviour
         GUI.enabled=enabled;
         if(bossFight && GUI.Button(new Rect(30,269,225,32),"Chuyển sang hình nhân"))
         { ArenaPreview.TrainingMode=true; SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
-        if(!bossFight && GUI.Button(new Rect(30,401,225,30),ArenaProgress.IsWater?"Đấu Blastoise":"Đấu Charizard"))
+        if(!bossFight && GUI.Button(new Rect(30,401,225,30),ArenaProgress.IsDojo?"Đấu Lucario":ArenaProgress.IsHaunted?"Đấu Gengar":ArenaProgress.IsGarden?"Đấu Venusaur":ArenaProgress.IsWater?"Đấu Blastoise":"Đấu Charizard"))
         { ArenaPreview.TrainingMode=false; SceneManager.LoadScene(SceneManager.GetActiveScene().name); }
         }
 
@@ -83,6 +84,11 @@ public sealed class CombatHud : MonoBehaviour
             Fill(new Rect(420,65,440,63),Panel);
             Text(new Rect(430,68,420,25),boss.Status+"   "+Mathf.CeilToInt(boss.Health)+" / "+boss.HealthCapacity,15,Gold,TextAnchor.MiddleCenter);
             Bar(new Rect(436,103,408,10),boss.Health/boss.HealthCapacity,new Color32(230,85,48,255));
+            if(boss is LucarioBoss lucario && !combat.BattleEnded && !combat.Player.IsEntering && combat.FeedbackRemaining<=0)
+            {
+                Fill(new Rect(362,580,556,32),Panel);
+                Text(new Rect(370,585,540,23),lucario.DodgeHint,13,new Color32(163,233,249,255),TextAnchor.MiddleCenter);
+            }
         }
         if(combat.Dummy && !bossFight && Camera.main)
         {
@@ -100,14 +106,16 @@ public sealed class CombatHud : MonoBehaviour
         }
         if(combat.FeedbackRemaining>0)
             Text(new Rect(310,591,660,25),combat.Feedback,14,Gold,TextAnchor.MiddleCenter);
-        if(combat.StunRemaining>0)
+        if(!combat.BattleEnded && combat.StunRemaining>0)
             Text(new Rect(460,550,360,30),"CHOÁNG • "+combat.StunRemaining.ToString("0.0")+"s",19,Gold,TextAnchor.MiddleCenter);
         for(int i=0;i<4;i++) DrawSkill(i,IconRect(i));
         if(combat.BattleEnded)
         {
-            Fill(new Rect(390,255,500,combat.Health>0 && combat.Dummy is CharizardBoss?220:190),Panel);
+            Fill(new Rect(390,255,500,combat.Health>0 && (combat.Dummy is CharizardBoss || combat.Dummy is VenusaurBoss || combat.Dummy is GengarBoss)?220:190),Panel);
             Text(new Rect(410,275,460,60),combat.Health>0?"CHIẾN THẮNG!\nĐã hạ gục "+((ArenaBoss)combat.Dummy).DisplayName:"PIKACHU ĐÃ GỤC",26,Gold,TextAnchor.MiddleCenter);
             if(GUI.Button(new Rect(505,367,270,45),"ĐÁNH LẠI")) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if(combat.Health>0 && combat.Dummy is VenusaurBoss && GUI.Button(new Rect(505,420,270,40),"MÀN 04 • PHẾ TÍCH MA ÁM")) ArenaProgress.Enter("GengarArena");
+            if(combat.Health>0 && combat.Dummy is GengarBoss && GUI.Button(new Rect(505,420,270,40),"MÀN 05 • VÕ ĐƯỜNG TRÊN NÚI")) ArenaProgress.Enter("LucarioArena");
             if(combat.Health>0 && combat.Dummy is CharizardBoss && GUI.Button(new Rect(505,420,270,40),"MÀN 02 • ĐỀN NƯỚC NGẬP")) ArenaProgress.Enter("BlastoiseArena");
         }
         GUI.matrix=previous;

@@ -1,10 +1,10 @@
-# Pokémon Boss Arena — Pikachu vs Charizard and Blastoise
+# Pokémon Boss Arena — Pikachu vs Charizard, Blastoise, Venusaur, Gengar and Lucario
 
 Unity 6000.5.7f1. Open this folder through Unity Hub, open
 `Assets/Scenes/MainMenu.unity`, and press Play.
 If the scene is missing, use **Pokemon > Create Main Menu Scene** once.
 
-Implemented: responsive 16:9 main menu, Charizard/Blastoise cards, start opens stage 1,
+Implemented: responsive 16:9 boss-selection menu with a paginated boss catalog,
 volume preference, and quit confirmation. Escape closes dialogs. Quit stops Play
 Mode in the Editor. Stage 1 now starts a 500-HP Charizard boss fight with four
 telegraphed attacks, player damage, victory/defeat and retry. See
@@ -15,6 +15,22 @@ the main menu, including on a fresh save. The Charizard victory screen also offe
 stage 2. The circular water temple has four new boss attacks and marked fountains.
 See `Docs/BLASTOISE_ARENA.md`. Open `Assets/Scenes/BlastoiseArena.unity` directly
 to test it in Unity. No stage-selection map or music yet.
+Stage 3, **Venusaur — Khu vườn cổ**, is also freely selectable. It has a clear
+circular stone court with perimeter roots, ruins and flowers, plus Razor Leaf,
+Leech Seed, Vine Whip and Solar Beam. See `Docs/VENUSAUR_ARENA.md` for balance.
+Stage 4, **Gengar — Sân phế tích ma ám**, adds a moonlit brick court, broken arches,
+tombs and faint perimeter mist. Shadow Ball, Sludge Bomb, Shadow Punch and Phantom
+Force use locked targets and bright persistent warnings. Select Gengar in the
+menu or continue from Venusaur's victory panel. See `Docs/GENGAR_ARENA.md`.
+Stage 5, **Lucario — Võ đường trên núi**, is on page 2 of the menu (press **TIẾP →**)
+and follows Gengar's victory panel. The mountain stone dojo has fluttering flags,
+snowy peaks, Aura Sphere, a three-hit Metal Claw, a locked Extreme Speed lane and
+a marked Meteor Mash leap. At half health Lucario increases the pace while preserving
+full attack warnings and punish windows. Original synthesized cues respect menu volume.
+See `Docs/LUCARIO_ARENA.md` for balance, animation mapping and repeatable Unity checks.
+Faster boss balance (2026-10-21): all five bosses charge approximately 25% sooner,
+recover sooner, have 20% shorter cooldowns and approach 20% faster.
+See `Docs/BOSS_TEMPO.md` for timings and movement-based counterplay checks.
 Pikachu flashes and emits impact sparks when hit. Taking 25 damage within 2s
 causes a 0.8s stun with orbiting stars, followed by 2s stun protection. A stun
 interrupts a casting ability, sets its cooldown to 2s, and refunds no resources.

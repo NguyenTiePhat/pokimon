@@ -24,11 +24,11 @@ public static class CharizardBossCheck
             Require(!boss.StartAttack(CharizardSkill.Flamethrower),"boss attacked during intro");
             combat.TakeDamage(100); Require(combat.Health==200,"intro damage");
             player.SampleEntrance(PikachuPlayer.EntranceDuration); player.transform.position=new Vector2(3,0);
-            Require(boss.StartAttack(CharizardSkill.Flamethrower) && boss.Cooldown(CharizardSkill.Flamethrower)==1,"flame cooldown");
-            Advance(.39f); Require(combat.Health==200 && boss.Shots.Count==0,"flame must warn before damage");
+            Require(boss.StartAttack(CharizardSkill.Flamethrower) && boss.Cooldown(CharizardSkill.Flamethrower)==boss.flameCooldown,"flame cooldown");
+            Advance(CharizardBoss.Windups[0]-.01f); Require(combat.Health==200 && boss.Shots.Count==0,"flame must warn before damage");
             Advance(.18f); Render("Flamethrower"); Advance(.8f);
             Require(combat.Health==185,"three flames must deal 5 each");
-            Require(boss.Cooldown(CharizardSkill.Flamethrower)==0,"flame cooldown must expire in 1 second");
+            Require(boss.Cooldown(CharizardSkill.Flamethrower)==0,"flame cooldown must expire after its configured duration");
 
             Fresh(); boss.StartAttack(CharizardSkill.DragonClaw); Advance(.4f);
             Require(boss.Height>0 && combat.Health==200,"claw lift and warning"); Render("DragonClaw-Warning");
@@ -41,7 +41,7 @@ public static class CharizardBossCheck
             Require(boss.Shots.Count==3,"air slash three arcs"); Render("AirSlash"); Advance(.9f);
             Require(combat.Health==188,"one central air blade should hit for 12");
 
-            Fresh(); boss.StartAttack(CharizardSkill.FireSpin); Advance(1.05f);
+            Fresh(); boss.StartAttack(CharizardSkill.FireSpin); Advance(CharizardBoss.Windups[3]-.05f);
             Require(combat.Health==200,"spin warning must not damage"); Render("FireSpin-Warning");
             Advance(.8f); Render("FireSpin"); Advance(2.4f);
             Require(combat.Health==152,"spin six ticks of 8 damage");

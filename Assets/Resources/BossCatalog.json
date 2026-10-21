@@ -17,6 +17,33 @@
       "accent": "#4EAECD",
       "frameWidth": 40,
       "frameHeight": 40
+    },
+    {
+      "name": "VENUSAUR",
+      "arena": "KHU VƯỜN CỔ",
+      "scene": "VenusaurArena",
+      "portrait": "VenusaurBoss/Idle-Anim",
+      "accent": "#8CCB71",
+      "frameWidth": 32,
+      "frameHeight": 32
+    },
+    {
+      "accent": "#AC88E5",
+      "arena": "SÂN PHẾ TÍCH MA ÁM",
+      "scene": "GengarArena",
+      "portrait": "GengarBoss/Idle-Anim",
+      "name": "GENGAR",
+      "frameWidth": 32,
+      "frameHeight": 40
+    },
+    {
+      "name": "LUCARIO",
+      "arena": "VÕ ĐƯỜNG TRÊN NÚI",
+      "scene": "LucarioArena",
+      "portrait": "LucarioBoss/Idle-Anim",
+      "accent": "#68CFE9",
+      "frameWidth": 32,
+      "frameHeight": 56
     }
   ]
 }

@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public static class WaterTemplePlayModeCheck
 {
     private const string Pending="WaterTemplePlayModeCheck.Pending";
-    private static int stage;
+    private static int stage,lastFrame;
     private static double deadline,captureAt;
     private static bool failed;
     private static string capturePath;
@@ -27,7 +27,7 @@ public static class WaterTemplePlayModeCheck
     }
     private static void Attach()
     {
-        ArenaPreview.TrainingMode=false; ArenaProgress.SuppressSaving=true; stage=0; deadline=EditorApplication.timeSinceStartup+140;
+        ArenaPreview.TrainingMode=false; ArenaProgress.SuppressSaving=true; stage=0; lastFrame=-1; deadline=EditorApplication.timeSinceStartup+140;
         EditorApplication.update-=Tick; EditorApplication.update+=Tick; Application.logMessageReceived-=OnLog; Application.logMessageReceived+=OnLog;
     }
     private static void OnLog(string message,string stack,LogType type) { if(type==LogType.Exception || type==LogType.Error || type==LogType.Assert) failed=true; }
@@ -35,6 +35,8 @@ public static class WaterTemplePlayModeCheck
     {
         if(failed || EditorApplication.timeSinceStartup>deadline) { Finish(false,"error/timeout at "+stage); return; }
         if(!EditorApplication.isPlaying || EditorApplication.isCompiling) return;
+        if(Time.frameCount==lastFrame)return;
+        lastFrame=Time.frameCount;
         var combat=Object.FindFirstObjectByType<PikachuCombat>(); if(!combat) return;
         var player=combat.Player;
         if(stage==0 && !player.IsEntering)
@@ -53,13 +55,17 @@ public static class WaterTemplePlayModeCheck
             stage=2;
         }
         var boss=combat.Dummy as BlastoiseBoss;
+        // The cannon now tracks: stepping aside and standing still is no longer a full dodge.
+        // Continue across its turning arc using the real movement path, once per game frame.
+        if((stage==6||stage==7)&&boss&&boss.ActiveSkill>=0)
+            player.TickMovement(new Vector2(1,1).normalized,Time.deltaTime);
         if(stage==2 && !player.IsEntering)
         {
             boss.AutoAttack=false;
             if(!boss.StartAttack(BlastoiseSkill.HydroCannon)) { Finish(false,"cannon start"); return; }
             stage=3;
         }
-        else if(stage==3 && boss.PhaseTime>=.9f)
+        else if(stage==3 && boss.PhaseTime>=BlastoiseBoss.Windups[3]*.6f)
         {
             if(!boss.WindingUp || combat.Health!=200) { Finish(false,"cannon warning damage"); return; }
             if(Visual) BeginCapture(combat,boss,"WaterTemple-Warning-HUD",4);

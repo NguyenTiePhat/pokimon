@@ -18,8 +18,8 @@ public sealed class BlastoiseBoss : ArenaBoss
     public override bool SpinActive=>!WindingUp && (ActiveSkill==0 || ActiveSkill==3) && SpinPower>0;
     public float LaneLength=>ActiveSkill==3?18:ActiveSkill==2?4:10;
     public float LaneHalfWidth=>ActiveSkill==3?.65f:ActiveSkill==2?.95f:.55f;
-    public static readonly float[] Windups={.45f,.35f,.45f,1.1f};
-    public static readonly float[] Cooldowns={4,6,8,18};
+    public static readonly float[] Windups={.34f,.27f,.34f,.83f};
+    public static readonly float[] Cooldowns={3.2f,4.8f,6.4f,14.4f};
     public const float PumpTurnSpeed=40f;
     public const float CannonTurnSpeed=65f;
     private Vector2 cannonTrailingDirection;
@@ -115,7 +115,7 @@ public sealed class BlastoiseBoss : ArenaBoss
             Vector2 delta=(Vector2)Opponent.Player.transform.position-(Vector2)transform.position;
             if(delta.sqrMagnitude>.001f) LockedDirection=delta.normalized;
             if(AutoAttack && delta.magnitude>4)
-            { transform.position=ArenaProgress.Clamp((Vector2)transform.position+LockedDirection*dt*1.3f*(SlowRemaining>0?1-SlowFraction:1),gameObject.scene); moving=true; }
+            { transform.position=ArenaProgress.Clamp((Vector2)transform.position+LockedDirection*dt*1.56f*(SlowRemaining>0?1-SlowFraction:1),gameObject.scene); moving=true; }
             if(AutoAttack && recovery<=0)
                 for(int i=0;i<4;i++) if(StartAttack((BlastoiseSkill)((nextSkill+i)%4))) { nextSkill=(ActiveSkill+1)%4; break; }
             Pose(); return;
@@ -145,7 +145,7 @@ public sealed class BlastoiseBoss : ArenaBoss
             if(!hit && CharizardBoss.DistanceToSegment(Opponent.Player.transform.position,before,after)<=.95f)
             { Opponent.TakeDamage(spinDamage); hit=true; }
         }
-        if(PhaseTime>=Durations[ActiveSkill]) { ActiveSkill=-1; SpinPower=0; recovery=.9f; }
+        if(PhaseTime>=Durations[ActiveSkill]) { ActiveSkill=-1; SpinPower=0; recovery=.68f; }
         Pose();
     }
     public override void ProjectileImpact(BossProjectile shot,bool direct)
@@ -165,7 +165,7 @@ public sealed class BlastoiseBoss : ArenaBoss
         }
     }
     public override void ReduceSpin(float power)
-    { SpinPower=Mathf.Max(0,SpinPower-power); if(SpinPower<=.0001f) { ActiveSkill=-1; recovery=.9f; } }
+    { SpinPower=Mathf.Max(0,SpinPower-power); if(SpinPower<=.0001f) { ActiveSkill=-1; recovery=.68f; } }
     public override bool StreamContact(Vector2 origin,Vector2 velocity,float radius,float horizon,out float time)
     {
         if(ActiveSkill==3)
@@ -200,7 +200,7 @@ public sealed class BlastoiseBoss : ArenaBoss
     {
         if(!body) return;
         string clip=ActiveSkill==2&&!WindingUp?"Rotate":ActiveSkill<0?(moving?"Walk":"Idle"):WindingUp?"Charge":"Shoot";
-        body.sprite=clips[clip].Sample(PikachuPlayer.DirectionFor(SpriteFacing),clock);
+        body.sprite=clips[clip].Sample(PikachuPlayer.DirectionFor(SpriteFacing),WindingUp?PhaseTime*ChargeAnimationRate:clock);
         body.color=!IsAlive?new Color(.4f,.5f,.6f):SlowRemaining>0?new Color(.65f,.85f,1):Color.white;
     }
     protected override void OnDestroy() { foreach(var clip in clips.Values) clip.Dispose(); shadow?.Dispose(); base.OnDestroy(); }

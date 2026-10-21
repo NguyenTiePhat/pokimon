@@ -1,13 +1,15 @@
 # Stage 2: flooded water temple
 
-Approved prototype balance (2026-10-19): Blastoise 650 HP, Pikachu 200 HP.
+Faster combat balance (2026-10-21): Blastoise 650 HP, Pikachu 200 HP.
 
 | Ability | Damage | Cooldown | Warning / behavior |
 | --- | --- | --- | --- |
-| Hydro Pump | 20, once per cast | 4s | 0.45s initial-lane warning, then two cannon jets converge into a 2.4s water beam; tracks at up to 40 degrees/s; range 10, half-width 0.55 |
-| Water Pulse | at most 24 | 6s | 0.35s warning, a 4.5 units/s orb aimed at a fixed point up to 8 units away; direct hit 12, expanding ring 12 |
-| Rapid Spin | 25, once per cast | 8s | 0.45s directional warning, then travels 4 units in 0.65s; dodge sideways |
-| Hydro Cannon | 60, once per cast | 18s | 1.1s warning, then a 0.8s mouth-fired tracking jet; range 18, warning half-width 0.65; tapered radius 0.13–0.5, gently moving curved centerline shared by visuals and collision |
+| Hydro Pump | 20, once per cast | 3.2s | 0.34s initial-lane warning, then two cannon jets converge into a 2.4s water beam; tracks at up to 40 degrees/s; range 10, half-width 0.55 |
+| Water Pulse | at most 24 | 4.8s | 0.27s warning, a 4.5 units/s orb aimed at a fixed point up to 8 units away; direct hit 12, expanding ring 12 |
+| Rapid Spin | 25, once per cast | 6.4s | 0.34s directional warning, then travels 4 units in 0.65s; dodge sideways |
+| Hydro Cannon | 60, once per cast | 14.4s | 0.83s warning, then a 0.8s mouth-fired tracking jet; range 18, warning half-width 0.65; tapered radius 0.13–0.5, gently moving curved centerline shared by visuals and collision |
+
+The boss rests 0.68s after attacks and approaches at 1.56 units/s.
 
 Hydro Pump holds its warning direction, then turns toward Pikachu during firing;
 keep moving sideways or dash past the beam to outrun its limited rotation.

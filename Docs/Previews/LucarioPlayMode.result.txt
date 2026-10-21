@@ -1,0 +1,1 @@
+LUCARIO_PLAYMODE_OK: menu page two, actual scene spawn/intro, E, meteor damage, dash dodge, victory/defeat/retry, entrance replay, training round trip, Gengar transition, live AI. Runtime samples=32077, average frame=0.3 ms, slowest=11.2 ms.

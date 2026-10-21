@@ -1,22 +1,22 @@
 # Charizard boss prototype
 
 The arena now starts a boss fight by default. Pikachu has 200 HP, Charizard has
-500 HP. The user approved this initial balance on 2026-10-14:
+500 HP. Faster combat balance updated on 2026-10-21:
 
 | Attack | Damage | Cooldown | Warning / execution |
 | --- | --- | --- | --- |
-| Flamethrower | 5 per fire puff | 1s | 0.4s warning, three straight puffs 0.12s apart |
-| Dragon Claw | 25 once per dash | 8s | 0.8s lift with glowing claws, 0.5s dash up to 7 units |
-| Air Slash | 12 per blade | 5s | 0.65s warning, three curved blades at -20/0/+20 degrees |
-| Fire Spin | 8 each 0.5s, six ticks | 15s | 1.1s warning, 3s expanding spiral fire stream up to 7 units |
+| Flamethrower | 5 per fire puff | 0.8s | 0.3s warning, three straight puffs 0.12s apart |
+| Dragon Claw | 25 once per dash | 6.4s | 0.6s lift with glowing claws, 0.5s dash up to 7 units |
+| Air Slash | 12 per blade | 4s | 0.49s warning, three curved blades at -20/0/+20 degrees |
+| Fire Spin | 8 each 0.5s, six ticks | 12s | 0.83s warning, 3s expanding spiral fire stream up to 7 units |
 
 Fire Spin follows the user's reference image: a stream of expanding orange/red
 fire rings coming from Charizard's mouth. It is not a circular trap centered on
 Pikachu. The attack locks its direction at warning start. All attacks have ground
 warnings; moving outside the locked path avoids damage. Dash grants no immunity.
 Cooldowns count from warning start; the boss never casts two abilities at once.
-AI rotates available attacks, rests 0.65s between casts and approaches if farther
-than 4.5 units away. Iron Tail's slow affects the boss's approach speed.
+AI rotates available attacks, rests 0.49s between casts and approaches if farther
+than 4.5 units away at 1.92 units/s. Iron Tail's slow affects the boss's approach speed.
 
 Pikachu's existing E/C targeting and electric projectiles damage Charizard.
 The boss cannot attack during Pikachu's entrance. Victory or defeat stops the

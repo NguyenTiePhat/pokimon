@@ -118,7 +118,9 @@ public sealed class MainMenu : MonoBehaviour
             float bob = Mathf.Sin(Time.unscaledTime * 1.6f + x) * 3;
             float frameHeight = Mathf.Max(1,boss.frameHeight), frameWidth=Mathf.Max(1,boss.frameWidth);
             // First downward-facing frame; preserve the source pixel aspect ratio.
-            GUI.DrawTextureWithTexCoords(new Rect(x + 62, y + 65 + bob, 120, frameHeight * 120 / frameWidth), sprite,
+            float portraitHeight=Mathf.Min(150,frameHeight*120/frameWidth);
+            float portraitWidth=portraitHeight*frameWidth/frameHeight;
+            GUI.DrawTextureWithTexCoords(new Rect(x + 122 - portraitWidth/2, y + 65 + bob, portraitWidth, portraitHeight), sprite,
                 new Rect(0, 1 - frameHeight / sprite.height, frameWidth / sprite.width, frameHeight / sprite.height));
         }
         Text(new Rect(x + 20, y + 232, 215, 35), boss.name, 24, Color.white);
@@ -142,7 +144,7 @@ public sealed class MainMenu : MonoBehaviour
             Text(new Rect(410, 295, 450, 35), "Âm lượng tổng: " + Mathf.RoundToInt(volume * 100) + "%", 18, Color.white);
             float next = GUI.HorizontalSlider(new Rect(410, 345, 460, 25), volume, 0, 1);
             if (!Mathf.Approximately(next, volume)) { volume = next; AudioListener.volume = volume; PlayerPrefs.SetFloat("Menu.Volume", volume); }
-            Text(new Rect(410, 380, 460, 35), "Bản thử hiện chưa có nhạc và âm thanh.", 14, muted);
+            Text(new Rect(410, 380, 460, 35), "Âm lượng hiệu ứng • Màn Lucario có âm báo chiêu.", 14, muted);
         }
         else Text(new Rect(410, 296, 460, 120), "Bạn có muốn thoát game không?", 18, Color.white);
         if (Button(new Rect(410, 447, 215, 44), "QUAY LẠI")) { PlayerPrefs.Save(); panel = Panel.None; }

@@ -1,0 +1,413 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.5/staging' branch; Version is '6000.5.7f1 (017862109af0) revision 96354'; Using compiler version '194234433'; Build Type 'Release'
+OS: 'Windows 11  (10.0.26300) CoreSingleLanguage' Language: 'en' Physical Memory: 11995 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-admin" at "2026-10-20T17:34:06.0295906Z"
+Process architecture: x64
+Date: 2026-10-20T17:34:06Z
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\6000.5.7f1\Editor\Unity.exe
+-batchmode
+-projectPath
+D:/UnityProjects/PokemonBossArena
+-executeMethod
+LucarioSetup.RunAll
+-quit
+-logFile
+D:/UnityProjects/PokemonBossArena/Docs/Previews/LucarioCheck.log
+Successfully changed project path to: D:/UnityProjects/PokemonBossArena
+D:/UnityProjects/PokemonBossArena
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=0"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.Player connection [12188]  Target information:
+
+Player connection [12188]  * "[IP] 192.168.1.137 [Port] 55504 [Flags] 2 [Guid] 3101170161 [EditorId] 3101170161 [Version] 1048832 [Id] WindowsEditor(7,PCcuaPhat) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [12188] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [12188] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Package Manager] Connected to IPC stream "Upm-24352" after 0.2 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-admin"
+[Licensing::IpcConnector] LicenseClient-admin channel disconnected successfully.
+[Licensing::IpcConnector] Channel LicenseClient-admin-6000.5.7 doesn't exist
+[Licensing::Module] Successfully launched the LicensingClient (PId: 23604)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-admin-6000.5.7" at "2026-10-20T17:34:09.5053872Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 23604, path: "D:/Unity/6000.5.7f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              89fe8e2a1b8843f3ab6d4ac5a2abd41a
+  Correlation Id:          c6f4f5e69f3d320f78322b40ae6cf4af
+  External correlation Id: 4308320716800104334
+  Machine Id:              Lhf/sAuseKZLr3d/xUxfAzPNncs=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-admin-6000.5.7" (connect: 0.57s, validation: 0.27s, handshake: 0.04s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-admin-6000.5.7-notifications" at "2026-10-20T17:34:09.8204685Z"
+[Licensing::Module] Connected to LicensingClient (PId: 23604, launch time: 0.03, total connection time: 0.88s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 18968478618703-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.03
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 3.87s
+[Licensing::Module] Licensing is initialized (took 2.92s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.5.7f1 (017862109af0)
+[Subsystems] Discovering subsystems at path D:/Unity/6000.5.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/UnityProjects/PokemonBossArena/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        NVIDIA GeForce RTX 3050 6GB Laptop GPU (ID=0x25ec)
+    Vendor:          NVIDIA
+    VRAM:            6002 MB
+    App VRAM Budget: 5234 MB
+    Driver:          32.0.15.8186
+Initialize mono
+Mono path[0] = 'D:/Unity/6000.5.7f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/6000.5.7f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'D:/Unity/6000.5.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/6000.5.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56352
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/6000.5.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003207 seconds.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.571 seconds
+Domain Reload Profiling: 1246ms
+	BeginReloadAssembly (211ms)
+		CreateAndSetChildDomain (20ms)
+	RebuildCommonClasses (7ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (84ms)
+	LoadAllAssembliesAndSetupDomain (346ms)
+		LoadAssemblies (188ms)
+		AnalyzeDomain (257ms)
+			TypeCache.Refresh (255ms)
+				TypeCache.ScanAssembly (236ms)
+	FinalizeReload (575ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (109ms)
+			ProcessInitializeOnLoadAttributes (122ms)
+			ProcessInitializeOnLoadMethodAttributes (240ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 5 packages:
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: D:\UnityProjects\PokemonBossArena\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imgui@1.0.0 (location: D:\UnityProjects\PokemonBossArena\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.jsonserialize@1.0.0 (location: D:\UnityProjects\PokemonBossArena\Library\PackageCache\com.unity.modules.jsonserialize)
+    com.unity.modules.screencapture@1.0.0 (location: D:\UnityProjects\PokemonBossArena\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.modules.imageconversion@1.0.0 (location: D:\UnityProjects\PokemonBossArena\Library\PackageCache\com.unity.modules.imageconversion)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.01 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: D:\Unity\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: D:/UnityProjects/PokemonBossArena
+DisplayProgressbar: Compiling Scripts
+Starting: D:\Unity\6000.5.7f1\Editor\Data\netcorerun\netcorerun.exe "D:\Unity\6000.5.7f1\Editor\Data\Tools\BuildPipeline\ScriptCompilationBuildProgram.exe" "Library/Bee/1900b0aE.dag.json" "Library/Bee/1900b0aE-inputdata.json" "Library\Bee\buildprogram0.traceevents"
+WorkingDir: D:/UnityProjects/PokemonBossArena
+ExitCode: 4 Duration: 5s563ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+*** Tundra requires additional run (5.48 seconds), 1 items updated, 160 evaluated
+ExitCode: 0 Duration: 0s516ms
+Starting: D:\Unity\6000.5.7f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --dagfilejson="Library\Bee\1900b0aE.dag.json" --profile="Library/Bee/backend2.traceevents" ScriptAssemblies
+WorkingDir: D:/UnityProjects/PokemonBossArena
+ExitCode: 0 Duration: 8s175msAssets\Scripts\WaterTempleEffects.cs(19,28): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Finished compiling graph: 170 nodes, 615 flattened edges (605 ToBuild, 4 ToUse), maximum node priority 18
+[159/167    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp
+[160/167    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.rsp
+[161/167    4s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll (+2 others)
+Assets\Scripts\WaterTempleEffects.cs(19,28): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+[162/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.pdb
+[163/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp.dll
+[164/167    2s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+Assets\Editor\CharizardPlayModeCheck.cs(39,18): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Editor\CharizardPlayModeCheck.cs(42,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Editor\WaterTemplePlayModeCheck.cs(38,20): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+
+Assets\Editor\PikachuPlayModeCheck.cs(61,63): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+
+Assets\Editor\PikachuPlayModeCheck.cs(61,23): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+[165/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[166/167    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (8.07 seconds), 8 items updated, 167 evaluated
+Assets\Editor\CharizardPlayModeCheck.cs(39,18): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Editor\CharizardPlayModeCheck.cs(42,26): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Editor\WaterTemplePlayModeCheck.cs(38,20): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Assets\Editor\PikachuPlayModeCheck.cs(61,63): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Assets\Editor\PikachuPlayModeCheck.cs(61,23): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+AssetDatabase: script compilation time: 15.633179s
+Begin MonoManager ReloadAssembly
+Importing 'GUID: c5b1f2b66f9fe264090134ccecd80e8d - Path: Assets/Resources/LucarioBoss' with importer (DefaultImporter)
+Imported 'GUID: c5b1f2b66f9fe264090134ccecd80e8d' -> (Import Result ID: '23026b9867da100a47acc89f68716202') in 0.081 seconds [static dependencies only]. Details - ImportResultOutputID=a6043c01de58ddb48277be957d1a8a74 DependenciesID=d91292ccb6012ea69256b8c9ac2253a5 StaticDependenciesID=e7d5ac9897c9c8b80ce0e5a56f68cb30 
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.786 seconds
+Domain Reload Profiling: 1597ms
+	BeginReloadAssembly (550ms)
+		DisableScriptedObjects (45ms)
+		CreateAndSetChildDomain (199ms)
+	RebuildCommonClasses (13ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (53ms)
+	LoadAllAssembliesAndSetupDomain (170ms)
+		LoadAssemblies (249ms)
+		AnalyzeDomain (16ms)
+			TypeCache.Refresh (7ms)
+			BuildScriptInfoCaches (3ms)
+	FinalizeReload (791ms)
+		SetupLoadedEditorAssemblies (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			BeforeProcessingInitializeOnLoad (201ms)
+			ProcessInitializeOnLoadAttributes (145ms)
+			ProcessInitializeOnLoadMethodAttributes (90ms)
+			AfterProcessingInitializeOnLoad (3ms)
+		AwakeInstancesAfterBackupRestoration (40ms)
+Importing 'GUID: 009944dfb5a1b2c4bb6d4fe47ef9809f - Path: Assets/Resources/LucarioBoss/Hurt-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: 009944dfb5a1b2c4bb6d4fe47ef9809f' -> (Import Result ID: '3c058248324f5737a85c387ee58657e1') in 0.063 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d94b939b0edb6bbde134e6de7dbfc209 DependenciesID=777c2e3191283ef909fb868fe0744335 StaticDependenciesID=ef48e9af839f26c5f7aee143e27fdf1a 
+Importing 'GUID: 0263e832db135bb4fa014514cd2d7848 - Path: Assets/Resources/LucarioBoss/Hurt-Anim.png' with importer (TextureImporter)
+Imported 'GUID: 0263e832db135bb4fa014514cd2d7848' -> (Import Result ID: '011299d592fa8d656287cbfebdaac2f6') in 0.178 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=23755a3d9a7c5c91051749bc3f1117d4 DependenciesID=4b783b80d1feb1b176b29afe11b51e40 StaticDependenciesID=1869b377b10e66d688d0b962fa2ebdb6 
+Importing 'GUID: 73bced182b09f6c418dfae791e388dcb - Path: Assets/Resources/LucarioBoss/Charge-Anim.png' with importer (TextureImporter)
+Imported 'GUID: 73bced182b09f6c418dfae791e388dcb' -> (Import Result ID: '4e935ddfbec4ca8662d31cac0d34bbda') in 0.032 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d9c25ebb5744101025ca6aa8db428de6 DependenciesID=633f41626316fa59da2a12edbf3e57aa StaticDependenciesID=77918c8c297b1d1242f0fe88da3e8fa4 
+Importing 'GUID: 34a9be78c01ab514d847dec8121b426b - Path: Assets/Resources/LucarioBoss/Hop-Anim.png' with importer (TextureImporter)
+Imported 'GUID: 34a9be78c01ab514d847dec8121b426b' -> (Import Result ID: 'fe84bbf8ee67cdd107ea65608a984ae5') in 0.025 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9e5e9b6c95d9ed882c001cea4bfd3bf1 DependenciesID=8252d9904d4d74962950edec65aa76cc StaticDependenciesID=5054ad044a8a033a3a615f225773ed00 
+Importing 'GUID: 759d52c4663b04940a25d028d043ed49 - Path: Assets/Resources/LucarioBoss/Walk-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: 759d52c4663b04940a25d028d043ed49' -> (Import Result ID: '40222e036b17f548e2ae7336f34a3a92') in 0.023 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7dda4acea007ebfe20f8bb5c0e788b81 DependenciesID=fc05b131e970fd278f3d0096dc2d07fb StaticDependenciesID=121ecc22eadabac6a1d08d08f284379e 
+Importing 'GUID: c567cf711491c9941bdd4b6a9a3282a0 - Path: Assets/Resources/LucarioBoss/HitGround-Anim.png' with importer (TextureImporter)
+Imported 'GUID: c567cf711491c9941bdd4b6a9a3282a0' -> (Import Result ID: '35005f80107784a46c89b04cd0f4dc11') in 0.023 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8bcd3972e4fb42d2c086b870cecb9a6a DependenciesID=82dfc461ff28d67744bced5f5b7c0c68 StaticDependenciesID=54682704236e60d33e422390519788a1 
+Importing 'GUID: e6a4310fbefddd04d88a2e13ded47ed4 - Path: Assets/Resources/LucarioBoss/RearUp-Anim.png' with importer (TextureImporter)
+Imported 'GUID: e6a4310fbefddd04d88a2e13ded47ed4' -> (Import Result ID: 'ee8e2e6851c5ab03f7397e7e69c4a81f') in 0.046 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2b50e7105631af40ceb10511a010951d DependenciesID=5aee52bcde47df0ad78ca61cd3aa4103 StaticDependenciesID=2c8a93e8aa46a01c12fd2a5e759fd42c 
+Importing 'GUID: 68d0bc9a45704a44d9c6e03c5a6612f4 - Path: Assets/Resources/LucarioBoss/QuickStrike-Anim.png' with importer (TextureImporter)
+Imported 'GUID: 68d0bc9a45704a44d9c6e03c5a6612f4' -> (Import Result ID: '7f0d2ae83f97d2db6526fb4b6289328f') in 0.052 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=44d8cc49f3f3ea2fe8baed68d49631e0 DependenciesID=572e4cd7e5ceb99e0c1cbdb989da36d3 StaticDependenciesID=e112a6b1505f1d09e5391445049df657 
+Importing 'GUID: 8872138dcf30f8c46abf706201d586d4 - Path: Assets/Resources/LucarioBoss/Faint-Anim.png' with importer (TextureImporter)
+Imported 'GUID: 8872138dcf30f8c46abf706201d586d4' -> (Import Result ID: '269e53ab685627bb66cb421f3e9c1016') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ed2da8d82c266437159b784c4c2f02b8 DependenciesID=e7cb9ed4f3e2130b41ba260d57a42e20 StaticDependenciesID=28f6ed6b80d4afefe6e5e8d22d841efb 
+Importing 'GUID: d84b6dbc93c52344f853b48ff5f868a3 - Path: Assets/Resources/LucarioBoss/Walk-Anim.png' with importer (TextureImporter)
+Imported 'GUID: d84b6dbc93c52344f853b48ff5f868a3' -> (Import Result ID: '73a4a79e338e7fcaa93a00a9e5ad106d') in 0.026 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=69d77fa13f6443619bccf4542a1d615f DependenciesID=6837945b4bc8ffff219d49b5bb7359b0 StaticDependenciesID=cee4ad105c91fa9bf8856f8e0ce43dd5 
+Importing 'GUID: f8dadff11e93f29449bb5dad14cc6f44 - Path: Assets/Resources/LucarioBoss/HitGround-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: f8dadff11e93f29449bb5dad14cc6f44' -> (Import Result ID: '0722ccc874ea8bdb6e5f0eba97f392f4') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ec4ca78ba967d10be6c45b700a55f841 DependenciesID=cff01d4a49130bb24e6784aa97ce656b StaticDependenciesID=12c69dfcea3ff92cf160b2ccacdad413 
+Importing 'GUID: 9b11a44103a843e49b289dbecb6f2129 - Path: Assets/Resources/LucarioBoss/Pose-Anim.png' with importer (TextureImporter)
+Imported 'GUID: 9b11a44103a843e49b289dbecb6f2129' -> (Import Result ID: 'db7e14b761b923ac4dbe81c9be1d55f9') in 0.020 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f8fac8000ca88e96741e6d66f4f7c3e7 DependenciesID=6c26d3789be213cf29fb65e786c8b6e6 StaticDependenciesID=431813cf75dddf136a9429e7fd166c34 
+Importing 'GUID: eb1ab03936ef32b48b15bd47fb70052e - Path: Assets/Resources/LucarioBoss/Hop-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: eb1ab03936ef32b48b15bd47fb70052e' -> (Import Result ID: '2648290732faac67b4c120d73655ac2c') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4e64193a3222e277cfd90adc231852ea DependenciesID=1aca8d81b001224b82fa100730a0db2b StaticDependenciesID=43504ff2c403353b8d194030cd59907c 
+Importing 'GUID: 0d00f31de7e070d45a4ca1d587940ec2 - Path: Assets/Resources/LucarioBoss/LeapForth-Anim.png' with importer (TextureImporter)
+Imported 'GUID: 0d00f31de7e070d45a4ca1d587940ec2' -> (Import Result ID: '4243eab35334cf0b0629a23ff46958c5') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=61efd1fd613b25178705fc2295ec99bd DependenciesID=6ba18823e325ce9f024d18d07b1e88fb StaticDependenciesID=6fa6b6587bb8096ad3d439a7f2567baa 
+Importing 'GUID: 4df9da5d975718e4385a340e925aaca6 - Path: Assets/Resources/LucarioBoss/Attack-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: 4df9da5d975718e4385a340e925aaca6' -> (Import Result ID: '92f2d01f3fc9dc99fb364e141e254eb3') in 0.026 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5cbf7b9dcb14fdf77da22101f4bb99a7 DependenciesID=d927817472c8138e351ee051acdde8f8 StaticDependenciesID=aec15710a324affacdb3841b0845993c 
+Importing 'GUID: 0e87bbab523ae294ab2c0fa2909e59f9 - Path: Assets/Resources/LucarioBoss/Attack-Anim.png' with importer (TextureImporter)
+Imported 'GUID: 0e87bbab523ae294ab2c0fa2909e59f9' -> (Import Result ID: 'a4000e1f929ec8ce03ef6ef5dcd1f4d3') in 0.029 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cd3b214cf91e9c9678f0b967a4a6cf42 DependenciesID=8a0a3eee0e834c30b44c5d26c271bce2 StaticDependenciesID=677f05dd0267ef5179857e08b8c3ffc8 
+Importing 'GUID: 1efc67bbce0be404cbcfda0bd94ce9fc - Path: Assets/Resources/LucarioBoss/Pose-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: 1efc67bbce0be404cbcfda0bd94ce9fc' -> (Import Result ID: '65c54175f4173b7e72411ca33ae87b7e') in 0.016 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=19841ab3805b174359cffadd5d454742 DependenciesID=050425758a5d2b3d5b27a35d0a1c2aef StaticDependenciesID=4b95e2c3824146486b4626f63062d527 
+Importing 'GUID: 3e7647fb841090646be443edd211732e - Path: Assets/Resources/LucarioBoss/QuickStrike-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: 3e7647fb841090646be443edd211732e' -> (Import Result ID: 'ef39b59f4dda95d12216e3e599c255d6') in 0.052 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=61b02dd38e8b1038d3d7d8833673706b DependenciesID=a39afee5e652dad0ed2504283c42669d StaticDependenciesID=ccb398a0a94ff9db71a59f8cff66d382 
+Importing 'GUID: 6f6c69e851675d9459bb91d2a5baca1e - Path: Assets/Resources/LucarioBoss/Idle-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: 6f6c69e851675d9459bb91d2a5baca1e' -> (Import Result ID: '6249a140bff8fbd32a994c3b0512b563') in 0.020 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=da98d03051a1c26a238a96db9295cd45 DependenciesID=cf32e3aee90eedac163578c2f06f42bd StaticDependenciesID=548ee51af04c357c5180fae417438929 
+Importing 'GUID: 7f406d0a114771749832718d878e6e96 - Path: Assets/Resources/LucarioBoss/Idle-Anim.png' with importer (TextureImporter)
+Imported 'GUID: 7f406d0a114771749832718d878e6e96' -> (Import Result ID: 'e2e2c6b543f78c8f67b0016356bbf86a') in 0.024 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1c798d80e6b74d54539f48aeab764bc9 DependenciesID=881847e37af1460131d8d2f9c78d8f27 StaticDependenciesID=502ee0654aec444341bd1fd053b861aa 
+Importing 'GUID: 7f917a7df1b640745b34e15ead35d8c4 - Path: Assets/Resources/LucarioBoss/RearUp-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: 7f917a7df1b640745b34e15ead35d8c4' -> (Import Result ID: 'de726b5942327daf6d887bd49c833082') in 0.019 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ae17a2dfe02aa039e61bf3f89109508f DependenciesID=f3740e3618c4c4f57f59c0899f555bec StaticDependenciesID=bea390f87f58be2e7a2b13c10e2fa1be 
+Importing 'GUID: cf169eaa5640ad440a796a6d04780878 - Path: Assets/Resources/LucarioBoss/LeapForth-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: cf169eaa5640ad440a796a6d04780878' -> (Import Result ID: '26417cafb1517e242bf06c33d4e57241') in 0.018 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ab31a19c08a4909fc0a8a08d827366e3 DependenciesID=a0ed7c7e1f7ca00fc0f8ee42b536f70e StaticDependenciesID=2a6e3e218c7fa8cf442f40e1fedff7b1 
+Importing 'GUID: cf782245f10acc046b5628f0ddb48024 - Path: Assets/Resources/LucarioBoss/Charge-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: cf782245f10acc046b5628f0ddb48024' -> (Import Result ID: '0f832d0033603d3c96aeae0a37043bc5') in 0.021 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b51f7daf7a683b76ae80add05a9491b1 DependenciesID=1da4f4969d1dfdd89562acdfdcd06d46 StaticDependenciesID=928ceb731b74dd4ac3d4b54842db5224 
+Importing 'GUID: ff2558dda65634942bc31b4a700ef8b8 - Path: Assets/Resources/LucarioBoss/Faint-Shadow.png' with importer (TextureImporter)
+Imported 'GUID: ff2558dda65634942bc31b4a700ef8b8' -> (Import Result ID: '52e9af9f746541c04dc1089dcb27ff24') in 0.017 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8c55f2f53b4c25e972d630b636cadc2b DependenciesID=c3aaedd91e71a6dcf384448559e13b84 StaticDependenciesID=3a1bd6dc332459beffb4eb0199b492cb 
+Importing 'GUID: 20a64d428b5673d4b8956dc9cc456a20 - Path: Assets/Resources/LucarioBoss/credits.txt' with importer (TextScriptImporter)
+Imported 'GUID: 20a64d428b5673d4b8956dc9cc456a20' -> (Import Result ID: '2f01c91ea04c6216abe3dd95e9c28ed3') in 0.020 seconds [static dependencies only]. Details - ImportResultOutputID=2ebebe849639fb5022ef236ed1b08c40 DependenciesID=1d9bb37dded4d8e1c357cdd8d74b53ad StaticDependenciesID=d077b153a51626420235ba567df468e7 
+Importing 'GUID: 024264aa8c443b74aa65fec1e7c14005 - Path: Assets/Resources/BossCatalog.json' with importer (TextScriptImporter)
+Imported 'GUID: 024264aa8c443b74aa65fec1e7c14005' -> (Import Result ID: '2c81088bc517a03c50230ccde5bac514') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=1b197d7e85727730ad570b8ea2c3d14e DependenciesID=a25dffcaa1b42bcde558e9fe27465662 StaticDependenciesID=cd2d7858c6dded39e3aa0454a3b756bc 
+Importing 'GUID: a438125a84c61f5409d2a74569ba4447 - Path: Assets/Resources/LucarioBoss/AnimData.xml' with importer (TextScriptImporter)
+Imported 'GUID: a438125a84c61f5409d2a74569ba4447' -> (Import Result ID: 'cf0446e9d03c790a09113e2ccf64d50a') in 0.016 seconds [static dependencies only]. Details - ImportResultOutputID=79ba917428343229fc60578bc31c9975 DependenciesID=75e44ed22abb5c767f725d6b49cf24f3 StaticDependenciesID=8c71bd0e7ed720fc80ceecc329204144 
+Starting new worker id: 0 with log in D:/UnityProjects/PokemonBossArena/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=dc9fbd7b927d1df48a867a245863d74d): Total: 18.641 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=28 (actual=28, local cache=0, cache server=0)
+		Asset DB Process Time: managed=23 ms, native=1983 ms
+		Asset DB Callback time: managed=118 ms, native=23 ms
+		Scripting: domain reloads=1, domain reload time=851 ms, compile time=15637 ms, other=3 ms
+		Project Asset Count: scripts=44, non-scripts=114
+		Asset File Changes: new=32, changed=36, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 19.307ms
+	ApplyChangesToAssetFolders: 0.527ms
+	Scan: 176.963ms
+	Collect global state as custom dependencies: 23.366ms
+	OnSourceAssetsModified: 1.891ms
+	CategorizeScriptCompilationAssets: 0.419ms
+	ProcessAssetsWithTransientArtifactChanges: 3.808ms
+	CategorizeAssets: 1.387ms
+	CompileScripts: 15637.190ms
+	ImportOutOfDateAssets: 1754.043ms (801.885ms without children)
+		ImportManagerImport: 934.835ms (5.822ms without children)
+			UpdateCategorizedAssets: 0.174ms
+		UnloadImportedAssets: 0.274ms
+		ImportSchedulerStart: 17.000ms
+	PostProcessAllAssets: 120.705ms
+		VersionControlSettings.HiddenFilePostprocess 0.379ms
+		Canvas.OnAllAssetImport 0.191ms
+		PostProcessCallbackCreateDeferredMaterials 0.154ms
+		ShaderAssetModifiedCallback 0.106ms
+		RaytracingShaderImportPostprocess 0.060ms
+		SpeedTreeImporter.PostprocessAllAssets 0.055ms
+		ComputeShaderImportPostprocess 0.055ms
+		MonoPostProcessAllAssets: 116.161ms
+			SyncVS.PostprocessSyncProject 31.068ms
+			AssetPostprocessor.OnPostprocessAllAssets 19.424ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 17.834ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 13.469ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 5.906ms
+			AssetChangedListener.OnPostprocessAllAssets 4.916ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 2.602ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.432ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 1.356ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 1.265ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.596ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.522ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.500ms
+			AssetEvents.OnPostprocessAllAssets 0.409ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.274ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.228ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.182ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.182ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.147ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.135ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.117ms
+	PostAssetChangesProfiler: 3.094ms
+	UnloadStreamsBegin: 1.476ms
+	PersistCurrentRevisions: 0.347ms
+	Untracked: 889.015ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Scanning for USB devices : 2.669ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Pokemon Boss Arena
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 59 unused Assets / (0.5 MB). Loaded Objects now: 708.
+Memory consumption went from 192.3 MB to 191.8 MB.
+Total: 8.879500 ms (FindLiveObjects: 0.118400 ms CreateObjectMapping: 0.026700 ms MarkObjects: 8.049100 ms  DeleteObjects: 0.437000 ms)
+
+Opening scene 'Assets/Scenes/MainMenu.unity'
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Loaded scene 'Assets/Scenes/MainMenu.unity'
+	Deserialize:            8.623 ms
+	Integration:            23.003 ms
+	Integration of assets:  0.002 ms
+	Thread Wait Time:       0.020 ms
+	Total Operation Time:   31.648 ms
+Unloading 1 unused Assets / (1.0 KB). Loaded Objects now: 714.
+Memory consumption went from 186.4 MB to 186.4 MB.
+Total: 7.526700 ms (FindLiveObjects: 0.061500 ms CreateObjectMapping: 0.022100 ms MarkObjects: 7.408600 ms  DeleteObjects: 0.031500 ms)
+
+Importing 'GUID: 145e6aa43811e2044ba06536a3667fdf - Path: Assets/Scenes/LucarioArena.unity' with importer (DefaultImporter)
+Imported 'GUID: 145e6aa43811e2044ba06536a3667fdf' -> (Import Result ID: '0a37a530d5c647de179a2a45d298f631') in 0.003 seconds [static dependencies only]. Details - ImportResultOutputID=9ac34f9250c4a37c161400bbf929acd0 DependenciesID=bc7ac3e378b85513a00142ae9ee0e169 StaticDependenciesID=f3498cf409323fcf000f39ab898c0891 
+Asset Pipeline Refresh (id=fe7f903fd805cf343ba910be6f516afc): Total: 0.045 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+AcceleratorClientConnectionCallback - disconnected - :0
+Importing 'GUID: 0000000000000000b000000000000000 - Path: ProjectSettings/EditorBuildSettings.asset' with importer (LibraryAssetImporter)
+Imported 'GUID: 0000000000000000b000000000000000' -> (Import Result ID: '6b0ac26795714eef4dbe3c6519b80352') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=4647dd083cfc32cebcd7526e8846440c DependenciesID=7202b9a8072d8af4e78f62f9a9f7b601 StaticDependenciesID=5f490332cb5c2f0eb5041f16b27c9e76 
+Asset Pipeline Refresh (id=3e46ccf87b0c75540af27522940589a9): Total: 0.020 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Opening scene 'Assets/Scenes/LucarioArena.unity additively'
+Loaded scene 'Assets/Scenes/LucarioArena.unity'
+	Deserialize:            0.902 ms
+	Integration:            3.285 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       0.016 ms
+	Total Operation Time:   4.207 ms
+Curl error 7: Failed to connect to config.uca.cloud.unity3d.com port 443 after 2292 ms: Could not connect to server
+Worker ready: AssetImportWorkerHW0 0
+LUCARIO_CHECK_OK: 1444 assertions; animation frames, warnings, locks, all directions, hit/dodge boundaries, real dash/walk, clashes, phase two, timestep consistency, lifecycle and 60s AI.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+LucarioSetup:Check () (at Assets/Editor/LucarioSetup.cs:237)
+LucarioSetup:RunAll () (at Assets/Editor/LucarioSetup.cs:20)
+
+(Filename: Assets/Editor/LucarioSetup.cs Line: 237)
+
+Batchmode quit successfully invoked - shutting down!
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-admin-6000.5.7-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-admin-6000.5.7 channel disconnected successfully.
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Exiting batchmode successfully now!
+Exiting without the bug reporter. Application will terminate with return code 0

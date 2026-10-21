@@ -51,7 +51,7 @@ public static class SpellClash
             for(int i=0;i<player.Projectiles.Count;i++)
             {
                 var ball=player.Projectiles[i]; float life=Mathf.Max(0,ball.duration-ball.elapsed);
-                if(Sweep(ball.Position-(Vector2)boss.transform.position,Velocity(ball),.35f+ball.charge*.3f,Mathf.Min(left,life),out float t))
+                if(!(boss is GengarBoss ghost && ghost.Hidden) && Sweep(ball.Position-(Vector2)boss.transform.position,Velocity(ball),.35f+ball.charge*.3f,Mathf.Min(left,life),out float t))
                     Consider(ref contact,2,i,-1,t);
                 if(life<=left) Consider(ref contact,4,i,-1,life);
             }

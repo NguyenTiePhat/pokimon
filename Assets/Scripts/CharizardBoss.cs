@@ -7,7 +7,7 @@ public sealed class CharizardBoss : ArenaBoss
 {
     public float maximumHealth = 500;
     public float flameDamage = 5, clawDamage = 25, airDamage = 12, spinDamage = 8;
-    public float flameCooldown = 1, clawCooldown = 8, airCooldown = 5, spinCooldown = 15;
+    public float flameCooldown = .8f, clawCooldown = 6.4f, airCooldown = 4, spinCooldown = 12;
     public bool AutoAttack = true;
     public int ActiveSkill { get; private set; } = -1;
     public bool WindingUp { get; private set; }
@@ -20,7 +20,7 @@ public sealed class CharizardBoss : ArenaBoss
     public override void ReduceSpin(float power)
     {
         SpinPower=Mathf.Max(0,SpinPower-power);
-        if(SpinPower<=.0001f) { ActiveSkill=-1; Height=0; recovery=.65f; }
+        if(SpinPower<=.0001f) { ActiveSkill=-1; Height=0; recovery=.49f; }
     }
     private readonly float[] cooldowns = new float[4];
     private readonly Dictionary<string,PmdSpriteAnimation> clips = new Dictionary<string,PmdSpriteAnimation>();
@@ -30,7 +30,7 @@ public sealed class CharizardBoss : ArenaBoss
     private float clock, recovery = 1.2f;
     private int emitted, nextSkill;
     private bool clawHit;
-    private static readonly float[] Windups = { .4f, .8f, .65f, 1.1f };
+    public static readonly float[] Windups = { .3f, .6f, .49f, .83f };
     private static readonly float[] Durations = { .4f, .5f, .25f, 3f };
 
     public override void InitializeBoss(PikachuCombat opponent, Vector2 position)
@@ -77,7 +77,7 @@ public sealed class CharizardBoss : ArenaBoss
             recovery -= dt;
             Vector2 delta = (Vector2)Opponent.Player.transform.position-(Vector2)transform.position;
             if (delta.sqrMagnitude > .001f) LockedDirection=delta.normalized;
-            if(AutoAttack && delta.magnitude>4.5f) transform.position=Clamp((Vector2)transform.position+LockedDirection*dt*1.6f*(SlowRemaining>0?1-SlowFraction:1));
+            if(AutoAttack && delta.magnitude>4.5f) transform.position=Clamp((Vector2)transform.position+LockedDirection*dt*1.92f*(SlowRemaining>0?1-SlowFraction:1));
             if(AutoAttack && recovery<=0)
                 for(int n=0;n<4;n++)
                 {
@@ -126,7 +126,7 @@ public sealed class CharizardBoss : ArenaBoss
                 emitted++;
             }
         }
-        if(PhaseTime>=Durations[ActiveSkill]) { ActiveSkill=-1; Height=0; recovery=.65f; }
+        if(PhaseTime>=Durations[ActiveSkill]) { ActiveSkill=-1; Height=0; recovery=.49f; }
         UpdatePose();
     }
     public static float DistanceToSegment(Vector2 point,Vector2 a,Vector2 b)
@@ -136,7 +136,7 @@ public sealed class CharizardBoss : ArenaBoss
     {
         if(!body) return;
         string clip=!IsAlive?"Faint":ActiveSkill<0?"Idle":WindingUp?"Charge":ActiveSkill==1?"Attack":"Shoot";
-        body.sprite=clips[clip].Sample(PikachuPlayer.DirectionFor(LockedDirection),!IsAlive?0:clock);
+        body.sprite=clips[clip].Sample(PikachuPlayer.DirectionFor(LockedDirection),!IsAlive?0:WindingUp?PhaseTime*ChargeAnimationRate:clock);
         body.transform.localPosition=Vector3.up*Height;
         body.color=!IsAlive?new Color(.5f,.5f,.5f):SlowRemaining>0?new Color(.65f,.85f,1):Color.white;
     }

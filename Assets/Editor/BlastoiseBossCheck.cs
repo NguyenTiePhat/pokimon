@@ -18,27 +18,27 @@ public static class BlastoiseBossCheck
             foreach(var root in scene.GetRootGameObjects()) if(root.TryGetComponent<Camera>(out var cam)) camera=cam;
             Fresh(); Check(boss.Health==650 && combat.Health==200,"starting health");
             combat.Player.ReplayEntrance(); Check(!boss.StartAttack(BlastoiseSkill.HydroPump),"intro allowed attack");
-            Fresh(); boss.StartAttack(BlastoiseSkill.HydroPump); Advance(.4f); Check(combat.Health==200,"pump damaged during warning"); Render("Pump-Warning");
+            Fresh(); boss.StartAttack(BlastoiseSkill.HydroPump); Advance(BlastoiseBoss.Windups[0]-.05f); Check(combat.Health==200,"pump damaged during warning"); Render("Pump-Warning");
             Advance(.1f); Check(combat.Health==180,"pump damage"); Render("HydroPump"); Advance(.8f); Check(combat.Health==180,"pump repeated damage");
-            Fresh(); boss.StartAttack(BlastoiseSkill.HydroPump); combat.Player.transform.position=new Vector2(3,3); Advance(.45f);
+            Fresh(); boss.StartAttack(BlastoiseSkill.HydroPump); combat.Player.transform.position=new Vector2(3,3); Advance(BlastoiseBoss.Windups[0]);
             Check(Vector2.Angle(boss.LockedDirection,Vector2.right)<.1f,"pump warning must hold initial direction");
             Advance(.2f); Check(combat.Health==200 && Vector2.Angle(boss.LockedDirection,Vector2.right)<=8.1f,"pump turn must be limited and initially dodgeable");
             Advance(1.2f); Check(combat.Health==180 && boss.SpinActive,"pump must track and reach stationary target"); Render("HydroPump-Tracking");
             Advance(1.2f); Check(combat.Health==180 && !boss.SpinActive,"pump must end without repeated damage");
-            Fresh(); boss.StartAttack(BlastoiseSkill.HydroPump); Advance(.46f);
+            Fresh(); boss.StartAttack(BlastoiseSkill.HydroPump); Advance(BlastoiseBoss.Windups[0]+.01f);
             for(int side=-1;side<=1;side+=2)
                 Check(boss.StreamContact(Vector2.Lerp(boss.CannonSocket(side),boss.StreamJoin,.4f),Vector2.zero,0,0,out _),"cannon branch missing collision");
             Check(!boss.StreamContact(new Vector2(.1f,1.2f),Vector2.zero,0,0,out _),"space outside branches must be safe");
             Fresh(); boss.StartAttack(BlastoiseSkill.WaterPulse); Advance(.8f); Render("WaterPulse"); Advance(1.5f); Check(combat.Health==176,"pulse direct and wave damage must total 24");
             Fresh(); boss.StartAttack(BlastoiseSkill.WaterPulse); Vector2 target=boss.LockedPoint; combat.Player.transform.position=new Vector2(3,3); Advance(1.25f); Render("Pulse-Wave"); Advance(1);
             Check(combat.Health==200 && boss.LockedPoint==target && boss.Shots.Count==0 && boss.Waves.Count==0,"pulse must miss, land and expire");
-            Fresh(); boss.StartAttack(BlastoiseSkill.RapidSpin); Advance(.4f); Check(combat.Health==200 && boss.transform.position==Vector3.zero,"spin warning");
+            Fresh(); boss.StartAttack(BlastoiseSkill.RapidSpin); Advance(BlastoiseBoss.Windups[2]-.05f); Check(combat.Health==200 && boss.transform.position==Vector3.zero,"spin warning");
             Advance(.5f); Render("RapidSpin"); Advance(.7f); Check(combat.Health==175 && Mathf.Abs(boss.transform.position.x-4)<.01f,"spin must move 4 and hit once");
             Fresh(); boss.StartAttack(BlastoiseSkill.RapidSpin); combat.Player.transform.position=new Vector2(3,2); Advance(2); Check(combat.Health==200,"spin must allow sideways dodge");
-            Fresh(); boss.StartAttack(BlastoiseSkill.HydroCannon); Advance(1.05f); Check(combat.Health==200 && boss.WindingUp,"cannon shortened warning"); Render("Cannon-Warning");
+            Fresh(); boss.StartAttack(BlastoiseSkill.HydroCannon); Advance(BlastoiseBoss.Windups[3]-.05f); Check(combat.Health==200 && boss.WindingUp,"cannon shortened warning"); Render("Cannon-Warning");
             Advance(.1f); Check(combat.Health==140,"cannon damage"); Render("HydroCannon"); Advance(1); Check(combat.Health==140,"cannon repeated damage");
             Fresh(); boss.StartAttack(BlastoiseSkill.HydroCannon); combat.Player.transform.position=new Vector2(-3,2); Advance(3); Check(combat.Health==200,"cannon turn limit leaves safe side");
-            Fresh(); boss.StartAttack(BlastoiseSkill.HydroCannon); combat.Player.transform.position=new Vector2(3,1); Advance(1.11f);
+            Fresh(); boss.StartAttack(BlastoiseSkill.HydroCannon); combat.Player.transform.position=new Vector2(3,1); Advance(BlastoiseBoss.Windups[3]+.01f);
             Check(combat.Health==200 && boss.LaneHalfWidth==.65f,"narrow cannon must leave old lane edge safe");
             Check(!boss.StreamContact(Vector2.zero,Vector2.zero,0,0,out _),"cannon must not originate behind mouth");
             Check(boss.StreamContact(boss.CannonPoint(.4f),Vector2.zero,0,0,out _),"curved cannon core must collide");
@@ -49,13 +49,13 @@ public static class BlastoiseBossCheck
             Check(boss.StreamContact(boss.CannonPoint(.6f),Vector2.zero,0,0,out _),"turning curve must retain collision"); Render("HydroCannon-Tracking");
             Advance(.55f); Check(!boss.SpinActive,"tracking cannon must expire");
 
-            Fresh(); boss.StartAttack(BlastoiseSkill.HydroPump); Advance(.43f);
+            Fresh(); boss.StartAttack(BlastoiseSkill.HydroPump); Advance(BlastoiseBoss.Windups[0]-.02f);
             combat.Projectiles.Add(new ElectricProjectile(new Vector2(2,0),new Vector2(2,0),1,100,7));
             Advance(.04f); Check(!boss.SpinActive && combat.Projectiles.Count==1 && Mathf.Abs(combat.Projectiles[0].damage-80)<.01f && combat.Health==200,"orb must block pump before player damage");
-            Fresh(); boss.StartAttack(BlastoiseSkill.HydroCannon); combat.Player.transform.position=new Vector2(3,2); Advance(1.11f);
+            Fresh(); boss.StartAttack(BlastoiseSkill.HydroCannon); combat.Player.transform.position=new Vector2(3,2); Advance(BlastoiseBoss.Windups[3]+.01f);
             float power=SpellClash.TraceThunderbolt(combat,boss,new Vector2(3,0),Vector2.zero,20,out var endpoint);
             Check(power==0 && Mathf.Abs(boss.SpinPower-40)<.01f,"cannon and Thunderbolt clash");
-            Fresh(); boss.StartAttack(BlastoiseSkill.WaterPulse); Advance(.7f);
+            Fresh(); boss.StartAttack(BlastoiseSkill.WaterPulse); Advance(BlastoiseBoss.Windups[1]+.25f);
             var shot=boss.Shots[0]; combat.Projectiles.Add(new ElectricProjectile(shot.position,shot.position,0,24,1,true)); SpellClash.Step(combat,boss,.01f);
             Check(boss.Shots.Count==0 && boss.Waves.Count==0,"canceled pulse must not create damaging wave");
 

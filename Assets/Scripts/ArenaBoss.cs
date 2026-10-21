@@ -3,6 +3,8 @@ using UnityEngine;
 
 public abstract class ArenaBoss : TrainingDummy
 {
+    // Charge poses follow the shorter anticipation; hit animations keep their contact timing.
+    protected const float ChargeAnimationRate = 4f / 3f;
     public PikachuCombat Opponent { get; protected set; }
     public readonly List<BossProjectile> Shots = new List<BossProjectile>();
     public Vector2 LockedDirection { get; protected set; } = Vector2.left;

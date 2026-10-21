@@ -7,6 +7,9 @@ public static class ArenaProgress
     public static bool SuppressSaving;
     private static bool sessionUnlocked;
     public static bool IsWater => SceneManager.GetActiveScene().name=="BlastoiseArena";
+    public static bool IsHaunted => SceneManager.GetActiveScene().name=="GengarArena";
+    public static bool IsGarden => SceneManager.GetActiveScene().name=="VenusaurArena";
+    public static bool IsDojo => SceneManager.GetActiveScene().name=="LucarioArena";
     public static bool WaterUnlocked => sessionUnlocked || PlayerPrefs.GetInt(UnlockKey,0)==1;
     public static void RecordVictory(ArenaBoss boss)
     {
@@ -20,7 +23,8 @@ public static class ArenaProgress
         => Clamp(p,SceneManager.GetActiveScene());
     public static Vector2 Clamp(Vector2 p,Scene scene)
     {
-        if(scene.name=="BlastoiseArena") return Vector2.ClampMagnitude(p,8.4f);
+        if(scene.name=="LucarioArena") return new Vector2(Mathf.Clamp(p.x,-MountainDojo.PlayableHalfSize.x,MountainDojo.PlayableHalfSize.x),Mathf.Clamp(p.y,-MountainDojo.PlayableHalfSize.y,MountainDojo.PlayableHalfSize.y));
+        if(scene.name=="BlastoiseArena"||scene.name=="VenusaurArena"||scene.name=="GengarArena") return Vector2.ClampMagnitude(p,8.4f);
         return new Vector2(Mathf.Clamp(p.x,-PikachuPlayer.MovementBounds.x,PikachuPlayer.MovementBounds.x),Mathf.Clamp(p.y,-PikachuPlayer.MovementBounds.y,PikachuPlayer.MovementBounds.y));
     }
 }

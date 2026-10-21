@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BlastoiseArena.unity
     guid: 8510163315c3abc43bb69d968954ec26
+  - enabled: 1
+    path: Assets/Scenes/VenusaurArena.unity
+    guid: 8c7e114792c89c6428597fcbb2acad38
+  - enabled: 1
+    path: Assets/Scenes/GengarArena.unity
+    guid: cda7db51809d42c791ef932f45c66777
+  - enabled: 1
+    path: Assets/Scenes/LucarioArena.unity
+    guid: 145e6aa43811e2044ba06536a3667fdf
   m_configObjects: {}
