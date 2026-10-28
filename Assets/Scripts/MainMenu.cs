@@ -71,7 +71,9 @@ public sealed class MainMenu : MonoBehaviour
         Fill(new Rect(48, 40, 26, 26), gold);
         Fill(new Rect(56, 48, 10, 10), ink);
         Text(new Rect(90, 42, 400, 28), "POKÉMON  /  BOSS ARENA", 17, Color.white);
-        Text(new Rect(1050, 44, 180, 25), "OFFLINE • SOLO", 13, muted, TextAnchor.UpperRight);
+        GUI.enabled = panel == Panel.None;
+        if (Button(new Rect(984, 32, 220, 44), "KẾT NỐI LAN / 1v1", true)) LanDuelMenu.Open(this);
+        GUI.enabled = true;
         Text(new Rect(76, 110, 680, 60), "CHỌN BOSS", 42, Color.white);
         Text(new Rect(78, 176, 850, 30), "Chọn đối thủ và bước vào đấu trường. Tất cả các màn đều mở sẵn.", 18, muted);
         Text(new Rect(960, 132, 245, 30), bosses.Length + " ĐỐI THỦ", 16, gold, TextAnchor.MiddleRight);

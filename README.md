@@ -84,3 +84,5 @@ Idle-Anim.png and AnimData.xml, downloaded 2026-10-13.
 Source: https://github.com/PMDCollab/SpriteCollab
 Pokémon characters belong to their respective owners. Repository availability
 does not imply a commercial license. Preserve source attribution when replacing assets.
+
+LAN 1v1: select **KẾT NỐI LAN / 1v1** in the main menu. Choose one of six Pokémon, then a themed PvP arena. See [two-computer setup and controls](Docs/LAN_MULTIPLAYER.md). This prototype uses equal-stat PvP shooting/dashing, separate from solo boss abilities.
